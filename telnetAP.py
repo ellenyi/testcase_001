@@ -24,17 +24,20 @@ time.sleep(.1)
 #输入用户名
 tn.read_until("login:")
 tn.write(user + "\n")
-
+print "hi login"
 #输入密码
 tn.read_until("Password:")
 tn.write(password + "\n")
+print "hi password"
 
 #进入鉴权模式
-tn.read_until("CST-AP035150#") #如果读到CST-AP035150#提示符，执行下面命令
+tn.read_until("CST-AP035150>") #如果读到CST-AP035150#提示符，执行下面命令
 tn.write("enable\n") #输入命令
+print "finish enable"
 tn.read_until("Password:") #同上
 tn.write(password + "\n")
-time.sleep(.1)
+time.sleep(5)
+print "finish login"
 #print tn.read_very_eager()
 #tn.write("quit\n")
 #print tn.read_all()
