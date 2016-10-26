@@ -1,0 +1,341 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>Log Resource</title>
+</head>
+<body>
+<h1>Log Resource</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Setting</th>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td>RobotWS.html</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="variable">
+<tr>
+<th class="name" colspan="5">Variable</th>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="keyword">
+<tr>
+<th class="name" colspan="5">Keyword</th>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Start Wireshark Log">Start Wireshark Log</a></td>
+<td>[Arguments]</td>
+<td>${connection}</td>
+<td>${file_name}</td>
+<td>${interface}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${filter}=${None}</td>
+<td>${duration}=${None}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword start tshark\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description |\n<br>
+| connection \ | Yes \ | start log pc connection |\n<br>
+| file_dir \ \ \ \ \ \ \ \ \ | Yes \ | Save path of pcap file without .pcap |\n<br>
+| interface \ \ \ \ \ \ \ \ | No \ \ | No. of network interface, 0,1,2 |\n<br>
+| filter_con \ \ \ \ \ \ \ | No \ \ | capture filter condition | \ \ \ \n<br>
+| exit_con \ \ \ \ \ \ \ \ \ | No \ \ | exit condition, such as: 'duration:20 filesiez:400' \ |\n<br>
+\n<br>
+Step:\n<br>
+| 1 | Switch to tshark connection |\n<br>
+| 2 | Start tshark as saved log type(pcap) |\n<br>
+\n<br>
+Example:\n<br>
+| 1 | Start wireshark log | ${conn} | /home/test_tshark | 1 | host x.x.x.x | duration:10 filesize:20 |\n<br>
+| 2 | Sleep | 3 |\n<br>
+| 3 | Stop wireshark log | ${conn} | /home/test_tshark | local_name | tcp.port==8888,http |\n<br>
+| 1 | Start wireshark log | ${conn} | c:\\tshark | 1 |\n<br>
+| 2 | Sleep | 3 | \n<br>
+| 2 | Stop wireshark log | ${conn} | c:\\tshark | local_name | tcp.port==8888,http |\n<br>
+\n<br>
+Arguments:\n<br>
+\n<br>
+1. "interface" -&gt;get interface number by command "tshark -D"\n<br>
+\n<br>
+2. "filter":\n<br>
+| expression | describe |\n<br>
+| (dst/src) host 10.18.5.4 | Capture only traffic to/from IP address 10.18.5.4 |\n<br>
+| ip | Capture only IP traffic |\n<br>
+| port 53 | Capture only DNS (port 53) traffic |\n<br>
+| port not 53 and not arp | Capture except all ARP and DNS traffic |\n<br>
+| host www.example.com and not (port 80 or port 25) | Capture non-HTTP and non-SMTP traffic on your server (both are equivalent) |\n<br>
+| (dst/src) net 192.168.0.0/24 \ \ Or \ (dst/src) net 192.168.0.0 mask 255.255.255.0 | Capture traffic to/from a range of IP addresses |\n<br>
+\n<br>
+3. "duration"\n<br>
+"duration:10" or "filesize:30" or both "duration:10 filesize:30"\n<br>
+\n<br>
+Note1: need to add wireshark path to environment variable.\n<br>
+Note2: option describe:\n<br>
+\ \ \ -q \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ be more quiet on stdout (e.g. when using statistics) \n<br>
+\ \ \ -a &lt;autostop cond.&gt; \ \ \ \ \ exit_con:NUM(stop after NUM seconds)\n<br>
+\ \ \ -f &lt;capture filter&gt; \ \ \ \ \ packet filter in libpcap filter syntax \ \ \ \ \n<br>
+\ \ \ -F &lt;output file type&gt; \ \ \ set the output file type, default is libpca\n<br>
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ an empty "-F" option will list the file types</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${START_WIRESHARK_PID}</td>
+<td>capture_pcap_log</td>
+<td>${file_name}.pcap</td>
+<td>${interface}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${filter}</td>
+<td>${duration}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Suite Variable</td>
+<td>${START_WIRESHARK_PID}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Return]</td>
+<td>${START_WIRESHARK_PID}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Stop Wireshark Log">Stop Wireshark Log</a></td>
+<td>[Arguments]</td>
+<td>${connection}</td>
+<td>${remote_file}</td>
+<td>${local_name}=Tshark.txt</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${pcap_to_txt_option}=${None}</td>
+<td>${copy2local_timeout}=600</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Documentation]</td>
+<td class="colspan3" colspan="3">This keyword stop tshark.\n<br>
+\n<br>
+| Input Parameters \ | Man. | Description |\n<br>
+| connection \ | Yes \ | start log pc connection |\n<br>
+| remote_file \ \ \ \ \ \ \ \ \ | Yes \ | start log pc save log path, name without .pcap |\n<br>
+| local_file_name | No \ \ | default as Tshark, without .txt |\n<br>
+| pcap_to_txt_option | No \ \ | convert file decode as option | \ \ \ \n<br>
+| copy2local timeout \ \ \ \ \ \ \ \ \ | No \ \ | if log is very big, need to set more timeout \ |\n<br>
+\n<br>
+Step:\n<br>
+| 1 | Switch tshark connection |\n<br>
+| 2 | kill tshark process id |\n<br>
+| 3 | Copy the tshark result log file to local | \n<br>
+\n<br>
+Example:\n<br>
+| 1 | Start wireshark log | ${conn} | /home/test_tshark | 1 | host x.x.x.x | duration:10 filesize:20 |\n<br>
+| 2 | Sleep | 3 |\n<br>
+| 3 | Stop wireshark log | ${conn} | /home/test_tshark | local_name | tcp.port==8888,http |\n<br>
+| 1 | Start wireshark log | ${conn} | c:\\tshark | 1 |\n<br>
+| 2 | Sleep | 3 | \n<br>
+| 2 | Stop wireshark log | ${conn} | c:\\tshark | local_name | tcp.port==8888,http |\n<br>
+\n<br>
+Arguments:\n<br>
+\n<br>
+${pcap_to_txt_option} is for decode as option, fomat as: tcp.port==8888,http</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${connection}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>RobotWS.stop_process</td>
+<td>${START_WIRESHARK_PID}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run keyword if</td>
+<td>'${pcap_to_txt_option}'=='${None}'</td>
+<td>execute shell command</td>
+<td>tshark -r "${remote_file}.pcap" -V &gt; "${remote_file}.txt"</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run keyword if</td>
+<td>'${pcap_to_txt_option}'!='${None}'</td>
+<td>execute shell command</td>
+<td>tshark -r "${remote_file}.pcap" -d ${pcap_to_txt_option} -V &gt; "${remote_file}.txt"</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Switch Host Connection</td>
+<td>${BTS PC CONNECTION}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run keyword if</td>
+<td>'${BTS PC CONNECTION.host}'!='${connection.host}'</td>
+<td>copy file to local</td>
+<td>${connection.host}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${connection.username}</td>
+<td>${connection.password}</td>
+<td>${remote_file}.txt</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TEST_LOG_DIR}${/}${local_name}.txt</td>
+<td>timeout=${copy2local_timeout}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run keyword if</td>
+<td>'${BTS PC CONNECTION.host}'!='${connection.host}'</td>
+<td>copy file to local</td>
+<td>${connection.host}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${connection.username}</td>
+<td>${connection.password}</td>
+<td>${remote_file}.pcap</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TEST_LOG_DIR}${/}${local_name}.pcap</td>
+<td>timeout=${copy2local_timeout}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run keyword if</td>
+<td>'${BTS PC CONNECTION.host}'=='${connection.host}'</td>
+<td>Copy File</td>
+<td>${remote_file}.txt</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TEST_LOG_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>run keyword if</td>
+<td>'${BTS PC CONNECTION.host}'=='${connection.host}'</td>
+<td>Copy File</td>
+<td>${remote_file}.pcap</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${TEST_LOG_DIR}</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</body>
+</html>
