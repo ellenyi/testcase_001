@@ -2513,6 +2513,559 @@ td.name, th.name {
 <td></td>
 <td></td>
 </tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_Portal_IP_WhiteList_Min">NMS_Portal_IP_WhiteList_Min</a></td>
+<td>[Tags]</td>
+<td>Portal</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Log</td>
+<td>步骤一：跳转到Portal模板页面</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>Portal配置</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Portal模板</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Portal Config Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Log</td>
+<td>步骤二：添加Portal模板</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>&amp;{dic}=</td>
+<td>create Dictionary</td>
+<td>temp_name=IP白名单最小值</td>
+<td>auth_mode=一键认证</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>desc=${space}</td>
+<td>auth_exceedtime=24</td>
+<td>ad_interval=10</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ipwhitelist_ip=1.1.1.1</td>
+<td>ipwhitelist_netmask=32</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Portal White List Set</td>
+<td>&amp;{dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Portal White List Set</td>
+<td>&amp;{dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_Portal_IP_WhiteList_Middle">NMS_Portal_IP_WhiteList_Middle</a></td>
+<td>[Tags]</td>
+<td>Portal</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Log</td>
+<td>步骤一：跳转到Portal模板页面</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>Portal配置</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Portal模板</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Portal Config Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Log</td>
+<td>步骤二：添加Portal模板</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>&amp;{dic}=</td>
+<td>create Dictionary</td>
+<td>temp_name=IP白名单正常值</td>
+<td>auth_mode=一键认证</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>desc=${space}</td>
+<td>auth_exceedtime=24</td>
+<td>ad_interval=10</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ipwhitelist_ip=192.168.1.100</td>
+<td>ipwhitelist_netmask=32</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Portal White List Set</td>
+<td>&amp;{dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Portal White List Set</td>
+<td>&amp;{dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_Portal_IP_WhiteList_Max">NMS_Portal_IP_WhiteList_Max</a></td>
+<td>[Tags]</td>
+<td>Portal</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Log</td>
+<td>步骤一：跳转到Portal模板页面</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>Portal配置</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Portal模板</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Portal Config Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Log</td>
+<td>步骤二：添加Portal模板</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>&amp;{dic}=</td>
+<td>create Dictionary</td>
+<td>temp_name=IP白名单最大值</td>
+<td>auth_mode=一键认证</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>desc=${space}</td>
+<td>auth_exceedtime=24</td>
+<td>ad_interval=10</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ipwhitelist_ip=255.255.255.255</td>
+<td>ipwhitelist_netmask=32</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Portal White List Set</td>
+<td>&amp;{dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Portal White List Set</td>
+<td>&amp;{dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>15</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_Portal_IP_WhiteList_OutOfRange_1">NMS_Portal_IP_WhiteList_OutOfRange_1</a></td>
+<td>[Tags]</td>
+<td>Portal</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Log</td>
+<td>步骤一：跳转到Portal模板页面</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>Portal配置</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Portal模板</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Portal Config Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Log</td>
+<td>步骤二：添加Portal模板</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>&amp;{dic}=</td>
+<td>create Dictionary</td>
+<td>temp_name=IP白名单最大值</td>
+<td>auth_mode=一键认证</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>desc=${space}</td>
+<td>auth_exceedtime=24</td>
+<td>ad_interval=10</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ipwhitelist_ip=1.1.1.1</td>
+<td>ipwhitelist_netmask=31</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Portal White List Set</td>
+<td>&amp;{dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Portal White List Set Exception</td>
+<td>&amp;{dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_Portal_IP_WhiteList_OutOfRange_2">NMS_Portal_IP_WhiteList_OutOfRange_2</a></td>
+<td>[Tags]</td>
+<td>Portal</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Log</td>
+<td>步骤一：跳转到Portal模板页面</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>Portal配置</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Portal模板</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Portal Config Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Log</td>
+<td>步骤二：添加Portal模板</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>&amp;{dic}=</td>
+<td>create Dictionary</td>
+<td>temp_name=IP白名单最大值</td>
+<td>auth_mode=一键认证</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>desc=${space}</td>
+<td>auth_exceedtime=24</td>
+<td>ad_interval=10</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ipwhitelist_ip=256.1.1.1</td>
+<td>ipwhitelist_netmask=32</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Portal White List Set</td>
+<td>&amp;{dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Portal White List Set Exception</td>
+<td>&amp;{dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_Portal_IP_WhiteList_Add_2">NMS_Portal_IP_WhiteList_Add_2</a></td>
+<td>[Tags]</td>
+<td>Portal</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Log</td>
+<td>步骤一：跳转到Portal模板页面</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>Portal配置</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Portal模板</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Portal Config Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Log</td>
+<td>步骤二：添加Portal模板</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>&amp;{dic}=</td>
+<td>create Dictionary</td>
+<td>temp_name=IP白名单正常值</td>
+<td>auth_mode=一键认证</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>desc=${space}</td>
+<td>auth_exceedtime=24</td>
+<td>ad_interval=10</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ipwhitelist_ip=192.168.1.100</td>
+<td>ipwhitelist_netmask=32</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Portal White List Set</td>
+<td>&amp;{dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Portal White List Set</td>
+<td>&amp;{dic}</td>
+<td></td>
+<td></td>
+</tr>
 </table>
 </body>
 </html>

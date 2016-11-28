@@ -7642,6 +7642,216 @@ td.name, th.name {
 <td></td>
 <td></td>
 </tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_Go To Device Mngt Page">Go To Device Mngt Page</a></td>
+<td>[Arguments]</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${list}=</td>
+<td>set variable</td>
+<td>@{list}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${len}=</td>
+<td>Get Length</td>
+<td>${list}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${nav}=</td>
+<td>set variable</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${submenu1}=</td>
+<td>set variable</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${submenu2}=</td>
+<td>Run keyword IF</td>
+<td>${len} &gt;= 3</td>
+<td>set variable</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>@{list}[2]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${submenu3}=</td>
+<td>Run keyword IF</td>
+<td>${len} &gt;= 4</td>
+<td>set variable</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>@{list}[3]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>nav:submenu:submenu1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${css_nav}=</td>
+<td>Run keyword IF</td>
+<td>"${nav}"=="设备管理"</td>
+<td>set variable</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>css=#menu &gt; div:nth-child(5) &gt; input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${css_submenu1}=</td>
+<td>Run keyword IF</td>
+<td>"${submenu1}" =="设备维护"</td>
+<td>set variable</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>css=#menu_dev_mtc</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ELSE IF</td>
+<td>"${submenu1}" =="CAPWAP"</td>
+<td>set variable</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>css=#menu_capwap</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>设备管理:设备维护:软件升级</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>设备管理:CAPWAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>设备管理:时间设置</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>设备管理:日志管理</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>设备管理:配置管理</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>设备管理:用户管理</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>设备管理:语言选择</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Focus</td>
+<td>${css_nav}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Element</td>
+<td>${css_nav}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Focus</td>
+<td>${css_submenu1}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Element</td>
+<td>${css_submenu1}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>select frame</td>
+<td>Frame_Content</td>
+<td></td>
+<td></td>
+</tr>
 </table>
 </body>
 </html>

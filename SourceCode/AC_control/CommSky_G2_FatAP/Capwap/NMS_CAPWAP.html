@@ -1,0 +1,1372 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>NMS CAPWAP</title>
+</head>
+<body>
+<h1>NMS CAPWAP</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Settings</th>
+</tr>
+<tr>
+<td class="name">Suite Teardown</td>
+<td>NMS_TestSuite_TearDown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Test Teardown</td>
+<td>NMS_TestCase_Teardown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Telnet</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Selenium2Library</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Userdefined</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//common_resource.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//common_resource.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//web_resource.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//web_resource.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_web_resource.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_web_resource.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_web_variable.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_web_variable.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//nms_web_resource.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//nms_web_resource.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_model_variable.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_model_variable.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="testcase">
+<tr>
+<th class="name" colspan="5">Test Cases</th>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_CAPWAP_Default">NMS_CAPWAP_Default</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>CAPWAP服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>CAPWAP服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page Should Contain</td>
+<td>没有记录</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_CAPWAP_Add">NMS_CAPWAP_Add</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>CAPWAP服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>CAPWAP服务器：新增</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{capwap_template}=</td>
+<td>create List</td>
+<td>AddCapwap</td>
+<td>172.20.99.166</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>172.20.99.165</td>
+<td>30</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_CAPWAP_Template_Min">NMS_CAPWAP_Template_Min</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>CAPWAP服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td>#</td>
+<td>CAPWAP服务器：新增</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td># 模板名称：1个字符</td>
+<td>主服务器：</td>
+<td># 备份服务器</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td># 心跳时间：最小10s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{capwap_template}=</td>
+<td>create List</td>
+<td>T</td>
+<td>172.20.99.166</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>172.20.99.165</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_CAPWAP_Template_Max">NMS_CAPWAP_Template_Max</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>CAPWAP服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td>#</td>
+<td>CAPWAP服务器：新增</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td># 模板名称：32个字符</td>
+<td>主服务器：</td>
+<td># 备份服务器</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td># 心跳时间：最长60s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{capwap_template}=</td>
+<td>create List</td>
+<td>12345678901234567890123456789012</td>
+<td>172.20.99.166</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>172.20.99.165</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_CAPWAP_Template_Middle">NMS_CAPWAP_Template_Middle</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>CAPWAP服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>CAPWAP服务器：新增</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{capwap_template}=</td>
+<td>create List</td>
+<td>常规capwap服务模板</td>
+<td>172.20.99.166</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>172.20.99.165</td>
+<td>30</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_CAPWAP_MainServer_domain_Min">NMS_CAPWAP_MainServer_domain_Min</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>CAPWAP服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>CAPWAP服务器：新增</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{capwap_template}=</td>
+<td>create List</td>
+<td>主服务模板域名长度最短</td>
+<td>1.cn</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>172.20.99.165</td>
+<td>30</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_CAPWAP_MainServer_domain_Max">NMS_CAPWAP_MainServer_domain_Max</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>CAPWAP服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>CAPWAP服务器：新增</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{capwap_template}=</td>
+<td>create List</td>
+<td>主服务模板域名长度最长</td>
+<td>123456789012345678901234567890123456789012345678901234567890.com</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>172.20.99.165</td>
+<td>30</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_MS_CAPWAP_MainServer_Exception_space">MS_CAPWAP_MainServer_Exception_space</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>CAPWAP服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>CAPWAP服务器：新增</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{capwap_template}=</td>
+<td>create List</td>
+<td>主capwap服务器为空</td>
+<td>${space}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>172.20.99.165</td>
+<td>30</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Capwap Server Exception</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_CAPWAP_MainServer_Exception_pull">NMS_CAPWAP_MainServer_Exception_pull</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>CAPWAP服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>CAPWAP服务器：新增</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{capwap_template}=</td>
+<td>create List</td>
+<td>主capwap服务器为#</td>
+<td>\#</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>172.20.99.165</td>
+<td>30</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Capwap Server Exception</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_CAPWAP_SubServer_Exception_space">NMS_CAPWAP_SubServer_Exception_space</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>CAPWAP服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>CAPWAP服务器：新增</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{capwap_template}=</td>
+<td>create List</td>
+<td>备份capwap服务器为空</td>
+<td>172.20.99.165</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${space}</td>
+<td>30</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Capwap Server Exception</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_CAPWAP_SubServer_Exception_pull">NMS_CAPWAP_SubServer_Exception_pull</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>CAPWAP服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>CAPWAP服务器：新增</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{capwap_template}=</td>
+<td>create List</td>
+<td>备份capwap服务器为#</td>
+<td>172.20.99.165</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>\#</td>
+<td>30</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Capwap Server Exception</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_CAPWAP_HeartRate_Exception_space">NMS_CAPWAP_HeartRate_Exception_space</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>CAPWAP服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>CAPWAP服务器：新增</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{capwap_template}=</td>
+<td>create List</td>
+<td>心跳检测为空</td>
+<td>172.20.99.165</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>172.20.99.165</td>
+<td>${space}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Capwap Server Exception</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_CAPWAP_HeartRate_Exception_pull">NMS_CAPWAP_HeartRate_Exception_pull</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>CAPWAP服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>CAPWAP服务器：新增</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{capwap_template}=</td>
+<td>create List</td>
+<td>心跳检测为#</td>
+<td>172.20.99.165</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>172.20.99.165</td>
+<td>\#</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Capwap Server Exception</td>
+<td>@{capwap_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_CAPWAP_DeleteAll">NMS_CAPWAP_DeleteAll</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>CAPWAP服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>删除所有CAPWAP服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Delete Capwap Server</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_CAPWAP_Add_Max">NMS_CAPWAP_Add_Max</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>CAPWAP服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>CAPWAP服务器：新增</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>: FOR</td>
+<td>${i}</td>
+<td>IN RANGE</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>12</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>@{capwap_template}=</td>
+<td>create List</td>
+<td>template_${i}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>...</td>
+<td>172.20.99.166</td>
+<td>172.20.99.165</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>...</td>
+<td>30</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td>Add Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>删除所有CAPWAP服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Delete Capwap Server</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_MS_CAPWAP_Template_Exception_illegal">MS_CAPWAP_Template_Exception_illegal</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>CAPWAP服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>CAPWAP服务器：新增</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{capwap_template}=</td>
+<td>create List</td>
+<td>"template"+"1"</td>
+<td>172.20.99.165</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>172.20.99.165</td>
+<td>30</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Add Capwap Server</td>
+<td>@{capwap_template}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Check Capwap Server Exception</td>
+<td>@{capwap_template}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</body>
+</html>
