@@ -1,0 +1,6025 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>Demo Test</title>
+</head>
+<body>
+<h1>Demo Test</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Settings</th>
+</tr>
+<tr>
+<td class="name">Suite Setup</td>
+<td>Common Suite Setup</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Suite Teardown</td>
+<td>#Common Suite Teardown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Test Setup</td>
+<td>Common Test Setup</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Test Teardown</td>
+<td>End_environment</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Force Tags</td>
+<td>sun wentao</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Selenium2Library</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Telnet</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Userdefined</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//common_resource.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//common_resource.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//web_resource.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//web_resource.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="variable">
+<tr>
+<th class="name" colspan="5">Variables</th>
+</tr>
+<tr>
+<td class="name">${licencetext}</td>
+<td>1、This AC is now in exemption period, exemption period remaining days: 29 days, in exemption period, maximum AP number that AC allowed is 1088.\n<br>
+2、When exemption period expires, the limit function from AC License will come into effect. Please timely check AC License, if it does't meets network demand, please timely upgrade.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${licencetext_chinese}</td>
+<td>1、此台AC现在处于免责期，免责期剩余天数：29天，免责期内AC允许的最大AP加入个数为1088个。\n<br>
+2、免责期到期后，AC的License限制功能将开始生效。请及时检查AC License是否满足现网需求，如果不是请及时升级。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="testcase">
+<tr>
+<th class="name" colspan="5">Test Cases</th>
+</tr>
+<tr>
+<td class="name"><a name="test_Init_WLAN Config">Init_WLAN Config</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>WLAN config</td>
+<td>${Add_WLANGROUP}</td>
+<td>0</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Add_WLANGROUP}-1</td>
+<td>${EMPTY}</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>91</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>32</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>${EMPTY}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Init_WLAN_VLAN">Init_WLAN_VLAN</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>WLAN-VLAN</td>
+<td>3 - ${Add_WLANGROUP}</td>
+<td>${EMPTY}</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>91</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>15</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_Init_AP Policy Apply">Init_AP Policy Apply</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN config</td>
+<td>${Add_WLANGROUP}</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${EMPTY}</td>
+<td>${Add_WLANGROUP}-1</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>1</td>
+<td>91</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>32</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN-VLAN</td>
+<td>3 - ${Add_WLANGROUP}</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>91</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>15</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP Policy Apply</td>
+<td>${AP_Group}</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>${Add_WLANGROUP}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AP group</td>
+<td>${AP4604_MAC_IP}</td>
+<td>${AP_Group}</td>
+<td>${Device_Type}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>36</td>
+<td>1</td>
+<td>2000</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Comment</td>
+<td>AP parameter config</td>
+<td>${AP_Group}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2</td>
+<td>5</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>10</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Frequency</td>
+<td>5.18 GHz</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_2.4G_channel_config_Radio1-2.4G">2.4G_channel_config_Radio1-2.4G</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2.412 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2.417 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2.422 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2.427 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2.432 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>6</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2.437 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>7</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2.442 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>8</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2.447 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>9</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2.452 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>10</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2.457 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>11</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2.462 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>12</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2.467 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>13</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2.472 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_2.4G_channel_config_Radio2-5G">2.4G_channel_config_Radio2-5G</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN config</td>
+<td>${Add_WLANGROUP}</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${EMPTY}</td>
+<td>${Add_WLANGROUP}-1</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>1</td>
+<td>91</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>32</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN-VLAN</td>
+<td>3 - ${Add_WLANGROUP}</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>91</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP Policy Apply</td>
+<td>${AP_Group}</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>${Add_WLANGROUP}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Add AP group</td>
+<td>${AP4604_MAC_IP}</td>
+<td>${AP_Group}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Device_Type}</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>run keyword if</td>
+<td>id=id_netWCard_0</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Delete AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>36</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.18 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>40</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.2 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>44</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.22 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>48</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.24 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>149</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.745 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>153</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.765 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>157</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.785 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>161</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.805 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>165</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.825 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_TX-Power_config_Radio1-2.4G">TX-Power_config_Radio1-2.4G</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>2000</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>27 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>1800</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>24 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>1600</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>22 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>1500</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>20 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>1400</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>19 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>1200</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>16 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>1000</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>14 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>800</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>750</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>10 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>600</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>8 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>500</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>7 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>400</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>250</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>3 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>200</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>3 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath0</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>3 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_TX-Power_config_Radio2-5G">TX-Power_config_Radio2-5G</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>2000</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>27 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>1800</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>24 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>1600</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>22 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>1500</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>20 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>1400</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>19 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>1200</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>16 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>1000</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>14 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>800</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>750</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>10 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>600</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>8 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>500</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>7 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>400</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>250</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>3 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>200</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>3 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP TxPower</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP TxPower</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Tx-Power</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>3 dBm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_mode_HT20_config">mode_HT20_config</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NGHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11G</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11G</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>16</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NGHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>20</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NGHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>21</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NGHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11A</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>8</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NAHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>10</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NAHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>32</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NAHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>34</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NAHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>40</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NAHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>42</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NAHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_mode_HT40_config">mode_HT40_config</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NGHT40PLUS</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11G</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11G</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>16</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NGHT40PLUS</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>20</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NGHT40PLUS</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>21</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NGHT40PLUS</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11A</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>8</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NAHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>10</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NAHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>32</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NAHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>34</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NAHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>40</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NAHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>42</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NAHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_2.4G_channel_config_36">2.4G_channel_config_36</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN config</td>
+<td>${Add_WLANGROUP}</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${EMPTY}</td>
+<td>${Add_WLANGROUP}-1</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>1</td>
+<td>91</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>32</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN-VLAN</td>
+<td>3 - ${Add_WLANGROUP}</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>91</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP Policy Apply</td>
+<td>${AP_Group}</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>${Add_WLANGROUP}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AP group</td>
+<td>${AP4604_MAC_IP}</td>
+<td>${AP_Group}</td>
+<td>${Device_Type}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>36</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP parameter config</td>
+<td>${AP_Group}</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.194</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.18 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_2.4G_channel_config_40">2.4G_channel_config_40</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN config</td>
+<td>${Add_WLANGROUP}</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${EMPTY}</td>
+<td>${Add_WLANGROUP}-1</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>1</td>
+<td>91</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>32</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN-VLAN</td>
+<td>3 - ${Add_WLANGROUP}</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>91</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP Policy Apply</td>
+<td>${AP_Group}</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>${Add_WLANGROUP}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Add AP group</td>
+<td>${AP4604_MAC_IP}</td>
+<td>${AP_Group}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${Device_Type}</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Delete AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>36</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Delete AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>40</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Delete AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>44</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Delete AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>48</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Delete AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>149</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.18 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close Window</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>10</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Delete AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>40</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.2 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close Window</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Delete AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>44</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.22 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close Window</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Delete AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>48</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.24 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close Window</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Delete AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>149</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.745 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close Window</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Delete AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>153</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.765 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close Window</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Delete AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>157</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.785 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close Window</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Delete AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>161</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.805 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close Window</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Delete AP Radio 2</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>165</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.825 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close Window</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_2.4G_channel_config_44">2.4G_channel_config_44</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN config</td>
+<td>${Add_WLANGROUP}</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${EMPTY}</td>
+<td>${Add_WLANGROUP}-1</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>1</td>
+<td>91</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>32</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN-VLAN</td>
+<td>3 - ${Add_WLANGROUP}</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>91</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP Policy Apply</td>
+<td>${AP_Group}</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>${Add_WLANGROUP}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AP group</td>
+<td>${AP4604_MAC_IP}</td>
+<td>${AP_Group}</td>
+<td>${Device_Type}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>44</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP parameter config</td>
+<td>${AP_Group}</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.194</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.22 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_2.4G_channel_config_48">2.4G_channel_config_48</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN config</td>
+<td>${Add_WLANGROUP}</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${EMPTY}</td>
+<td>${Add_WLANGROUP}-1</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>1</td>
+<td>91</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>32</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN-VLAN</td>
+<td>3 - ${Add_WLANGROUP}</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>91</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP Policy Apply</td>
+<td>${AP_Group}</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>${Add_WLANGROUP}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AP group</td>
+<td>${AP4604_MAC_IP}</td>
+<td>${AP_Group}</td>
+<td>${Device_Type}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>48</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP parameter config</td>
+<td>${AP_Group}</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.194</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.24 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_2.4G_channel_config_149">2.4G_channel_config_149</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN config</td>
+<td>${Add_WLANGROUP}</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${EMPTY}</td>
+<td>${Add_WLANGROUP}-1</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>1</td>
+<td>91</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>32</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN-VLAN</td>
+<td>3 - ${Add_WLANGROUP}</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>91</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP Policy Apply</td>
+<td>${AP_Group}</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>${Add_WLANGROUP}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AP group</td>
+<td>${AP4604_MAC_IP}</td>
+<td>${AP_Group}</td>
+<td>${Device_Type}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>149</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP parameter config</td>
+<td>${AP_Group}</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.194</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.745 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_2.4G_channel_config_153">2.4G_channel_config_153</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN config</td>
+<td>${Add_WLANGROUP}</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${EMPTY}</td>
+<td>${Add_WLANGROUP}-1</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>1</td>
+<td>91</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>32</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN-VLAN</td>
+<td>3 - ${Add_WLANGROUP}</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>91</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP Policy Apply</td>
+<td>${AP_Group}</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>${Add_WLANGROUP}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AP group</td>
+<td>${AP4604_MAC_IP}</td>
+<td>${AP_Group}</td>
+<td>${Device_Type}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>153</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP parameter config</td>
+<td>${AP_Group}</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.194</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.765 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_2.4G_channel_config_157">2.4G_channel_config_157</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN config</td>
+<td>${Add_WLANGROUP}</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${EMPTY}</td>
+<td>${Add_WLANGROUP}-1</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>1</td>
+<td>91</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>32</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN-VLAN</td>
+<td>3 - ${Add_WLANGROUP}</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>91</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP Policy Apply</td>
+<td>${AP_Group}</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>${Add_WLANGROUP}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AP group</td>
+<td>${AP4604_MAC_IP}</td>
+<td>${AP_Group}</td>
+<td>${Device_Type}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>157</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP parameter config</td>
+<td>${AP_Group}</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.194</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.785 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_2.4G_channel_config_161">2.4G_channel_config_161</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN config</td>
+<td>${Add_WLANGROUP}</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${EMPTY}</td>
+<td>${Add_WLANGROUP}-1</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>1</td>
+<td>91</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>32</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN-VLAN</td>
+<td>3 - ${Add_WLANGROUP}</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>91</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP Policy Apply</td>
+<td>${AP_Group}</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>${Add_WLANGROUP}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AP group</td>
+<td>${AP4604_MAC_IP}</td>
+<td>${AP_Group}</td>
+<td>${Device_Type}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>161</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP parameter config</td>
+<td>${AP_Group}</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.194</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.805 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_2.4G_channel_config_165">2.4G_channel_config_165</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN config</td>
+<td>${Add_WLANGROUP}</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${EMPTY}</td>
+<td>${Add_WLANGROUP}-1</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>1</td>
+<td>91</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>32</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>0</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>WLAN-VLAN</td>
+<td>3 - ${Add_WLANGROUP}</td>
+<td>${EMPTY}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td>91</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP Policy Apply</td>
+<td>${AP_Group}</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>${Add_WLANGROUP}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AP group</td>
+<td>${AP4604_MAC_IP}</td>
+<td>${AP_Group}</td>
+<td>${Device_Type}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add new radio card</td>
+<td>${AP_Group}</td>
+<td>42</td>
+<td>165</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>2000</td>
+<td>0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>AP parameter config</td>
+<td>${AP_Group}</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.194</td>
+<td>iwconfig ath8</td>
+<td>Frequency</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>5.825 GHz</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_mode_HT80_config">mode_HT80_config</a></td>
+<td>Logon AC web</td>
+<td>${AC_url}</td>
+<td>${AC_username}</td>
+<td>${AC_password}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NGHT40PLUS</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11G</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11G</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>16</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NGHT40PLUS</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>20</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NGHT40PLUS</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>1</td>
+<td>21</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NGHT40PLUS</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath0 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11A</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>8</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NAHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>10</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NAHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>32</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NAHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>34</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NAHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>40</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NAHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Modify AP Mode</td>
+<td>${AP_Group}</td>
+<td>2</td>
+<td>42</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_mode</td>
+<td>get_mode</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>11NAHT20</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AP point</td>
+<td>172.20.75.196</td>
+<td>iwpriv ath8 get_chwidth</td>
+<td>get_chwidth</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="keyword">
+<tr>
+<th class="name" colspan="5">Keywords</th>
+</tr>
+<tr>
+<td class="name"><a name="keyword_End_environment">End_environment</a></td>
+<td>Comment</td>
+<td>${regr}</td>
+<td>${result}=</td>
+<td>Run Keyword And Ignore Error</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Delete WLAN group</td>
+<td>${Add_WLANGROUP}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>${regr}</td>
+<td>${result}=</td>
+<td>Run Keyword And Ignore Error</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Delete_AP_Group</td>
+<td>${AP_Group}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>${regr}</td>
+<td>${result}=</td>
+<td>Run Keyword And Ignore Error</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Delete_AP_policy</td>
+<td>${AP_Group}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>disconnect_all_hosts</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</body>
+</html>

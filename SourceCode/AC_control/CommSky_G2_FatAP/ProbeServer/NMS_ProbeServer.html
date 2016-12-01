@@ -45,10 +45,10 @@ td.name, th.name {
   width: 10em;
 }
 </style>
-<title>NMS DNSServer</title>
+<title>NMS ProbeServer</title>
 </head>
 <body>
-<h1>NMS DNSServer</h1>
+<h1>NMS ProbeServer</h1>
 <table border="1" id="setting">
 <tr>
 <th class="name" colspan="5">Settings</th>
@@ -143,7 +143,7 @@ td.name, th.name {
 <th class="name" colspan="5">Test Cases</th>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNSServer_Default">NMS_DNSServer_Default</a></td>
+<td class="name"><a name="test_NMS_ProbeServer_Default">NMS_ProbeServer_Default</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -160,7 +160,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>探针服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -173,7 +173,7 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>DNS服务器</td>
+<td>探针服务器</td>
 <td></td>
 <td></td>
 </tr>
@@ -192,7 +192,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNSServer_Add">NMS_DNSServer_Add</a></td>
+<td class="name"><a name="test_NMS_ProbeServer_Add">NMS_ProbeServer_Add</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -209,7 +209,84 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>探针服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td>#</td>
+<td>探针服务器：新增</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td># 模板名称</td>
+<td>探针服务器类型</td>
+<td># 探针服务器地址</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td># 探针服务器端口</td>
+<td>上报时间间隔</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{probe_template}=</td>
+<td>create List</td>
+<td>AddProbe</td>
+<td>UDP探针服务</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>192.20.99.1</td>
+<td>100</td>
+<td>50</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Probe Server</td>
+<td>@{probe_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Probe Server</td>
+<td>@{probe_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_ProbeServer_Min">NMS_ProbeServer_Min</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>探针服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -222,42 +299,42 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{dns_template}=</td>
-<td>create List</td>
-<td>AddDNS</td>
-<td>172.20.99.166</td>
+<td>探针服务器：新增</td>
+<td>模板名称</td>
+<td>探针服务器类型</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>172.20.99.165</td>
+<td># 探针服务器地址</td>
+<td>探针服务器端口</td>
+<td>上报时间间隔</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{probe_template}=</td>
+<td>create List</td>
+<td>探</td>
+<td>UDP探针服务</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
 <td>1.1.1.1</td>
-<td></td>
+<td>1</td>
+<td>5</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server</td>
-<td>@{dns_template}</td>
+<td>Add Probe Server</td>
+<td>@{probe_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
+<td>Check Probe Server</td>
+<td>@{probe_template}</td>
 <td></td>
 <td></td>
 </tr>
@@ -269,7 +346,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNSServer_Min">NMS_DNSServer_Min</a></td>
+<td class="name"><a name="test_NMS_ProbeServer_Max">NMS_ProbeServer_Max</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -286,62 +363,55 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>探针服务器</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>Go To Component Sub Page</td>
 <td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
+<td>探针服务器：新增</td>
+<td>模板名称</td>
+<td>探针服务器类型</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td># 模板名称：1个字符</td>
-<td>DNS服务器1：</td>
-<td># DNS服务器2</td>
+<td># 探针服务器地址</td>
+<td>探针服务器端口</td>
+<td>上报时间间隔</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>...</td>
-<td># DNS服务器3：最小10s</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{dns_template}=</td>
+<td>@{probe_template}=</td>
 <td>create List</td>
-<td>T</td>
-<td>172.20.99.166</td>
+<td>探针服务器探针服务器探针服务器探针服务器探针服务器探针服务器12</td>
+<td>UDP探针服务</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>172.20.99.165</td>
-<td>1.1.1.1</td>
-<td></td>
+<td>255.255.255.254</td>
+<td>65535</td>
+<td>600</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server</td>
-<td>@{dns_template}</td>
+<td>Add Probe Server</td>
+<td>@{probe_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
+<td>Check Probe Server</td>
+<td>@{probe_template}</td>
 <td></td>
 <td></td>
 </tr>
@@ -353,7 +423,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNSServer_Max">NMS_DNSServer_Max</a></td>
+<td class="name"><a name="test_NMS_ProbeServer_Middle">NMS_ProbeServer_Middle</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -370,62 +440,55 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>探针服务器</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>Go To Component Sub Page</td>
 <td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
+<td>探针服务器：新增</td>
+<td>模板名称</td>
+<td>探针服务器类型</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td># 模板名称最长：32个字符</td>
-<td>DNS服务器1</td>
-<td># DNS服务器2</td>
+<td># 探针服务器地址</td>
+<td>探针服务器端口</td>
+<td>上报时间间隔</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>...</td>
-<td># DNS服务器3</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{dns_template}=</td>
+<td>@{probe_template}=</td>
 <td>create List</td>
-<td>12345678901234567890123456789012</td>
-<td>172.20.99.166</td>
+<td>探针服务器在这里</td>
+<td>淘点探针服务</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>172.20.99.165</td>
-<td>1.1.1.1</td>
-<td></td>
+<td>www.taodian.com</td>
+<td>33333</td>
+<td>300</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server</td>
-<td>@{dns_template}</td>
+<td>Add Probe Server</td>
+<td>@{probe_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
+<td>Check Probe Server</td>
+<td>@{probe_template}</td>
 <td></td>
 <td></td>
 </tr>
@@ -437,7 +500,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNSServer_Middle">NMS_DNSServer_Middle</a></td>
+<td class="name"><a name="test_NMS_Probe_Template_Exception_Space">NMS_Probe_Template_Exception_Space</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -454,7 +517,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>探针服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -467,273 +530,42 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{dns_template}=</td>
-<td>create List</td>
-<td>常规dns务模板</td>
-<td>172.20.99.166</td>
+<td>探针服务器：新增</td>
+<td>模板名称</td>
+<td>探针服务器类型</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>172.20.99.165</td>
-<td>1.1.1.1</td>
-<td></td>
+<td># 探针服务器地址</td>
+<td>探针服务器端口</td>
+<td>上报时间间隔</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"><a name="test_NMS_DNS_Server1_Min">NMS_DNS_Server1_Min</a></td>
-<td>Login NMS Web</td>
-<td>172.20.99.166</td>
-<td>auto_nms_003@commsky.com</td>
-<td>commsky</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{list}=</td>
+<td>@{probe_template}=</td>
 <td>create List</td>
-<td>配置</td>
-<td>组件管理</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>...</td>
-<td>服务组件</td>
-<td>DNS服务器</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Go To Component Sub Page</td>
-<td>@{list}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{dns_template}=</td>
-<td>create List</td>
-<td>DNS服务器长度最短</td>
-<td>1.1.1.2</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>...</td>
-<td>172.20.99.165</td>
-<td>2.2.2.2</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"><a name="test_NMS_DNS_Server1_Max">NMS_DNS_Server1_Max</a></td>
-<td>Login NMS Web</td>
-<td>172.20.99.166</td>
-<td>auto_nms_003@commsky.com</td>
-<td>commsky</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{list}=</td>
-<td>create List</td>
-<td>配置</td>
-<td>组件管理</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>...</td>
-<td>服务组件</td>
-<td>DNS服务器</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Go To Component Sub Page</td>
-<td>@{list}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{dns_template}=</td>
-<td>create List</td>
-<td>DNS服务器长度最长</td>
-<td>254.254.254.254</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>...</td>
-<td>172.20.99.165</td>
-<td>2.2.2.2</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"><a name="test_NMS_DNS_Server1_space">NMS_DNS_Server1_space</a></td>
-<td>Login NMS Web</td>
-<td>172.20.99.166</td>
-<td>auto_nms_003@commsky.com</td>
-<td>commsky</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{list}=</td>
-<td>create List</td>
-<td>配置</td>
-<td>组件管理</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>...</td>
-<td>服务组件</td>
-<td>DNS服务器</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Go To Component Sub Page</td>
-<td>@{list}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{dns_template}=</td>
-<td>create List</td>
-<td>主DNS服务器为空</td>
 <td>${space}</td>
+<td>淘点探针服务</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>172.20.99.165</td>
 <td>1.1.1.1</td>
-<td></td>
+<td>1</td>
+<td>300</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server</td>
-<td>@{dns_template}</td>
+<td>Add Probe Server</td>
+<td>@{probe_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
+<td>Check Probe Server Exception</td>
+<td>@{probe_template}</td>
 <td></td>
 <td></td>
 </tr>
@@ -745,7 +577,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNS_Server1_Exception_pull">NMS_DNS_Server1_Exception_pull</a></td>
+<td class="name"><a name="test_NMS_Probe_Server_Exception_Space">NMS_Probe_Server_Exception_Space</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -762,7 +594,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>探针服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -775,119 +607,42 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{dns_template}=</td>
-<td>create List</td>
-<td>主DNS服务器为#</td>
-<td>\#</td>
+<td>探针服务器：新增</td>
+<td>模板名称</td>
+<td>探针服务器类型</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>172.20.99.165</td>
-<td>172.20.99.164</td>
-<td></td>
+<td># 探针服务器地址</td>
+<td>探针服务器端口</td>
+<td>上报时间间隔</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server Exception</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>[Teardown]</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"><a name="test_NMS_DNS_Server2_space">NMS_DNS_Server2_space</a></td>
-<td>Login NMS Web</td>
-<td>172.20.99.166</td>
-<td>auto_nms_003@commsky.com</td>
-<td>commsky</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{list}=</td>
+<td>@{probe_template}=</td>
 <td>create List</td>
-<td>配置</td>
-<td>组件管理</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>...</td>
-<td>服务组件</td>
-<td>DNS服务器</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Go To Component Sub Page</td>
-<td>@{list}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{dns_template}=</td>
-<td>create List</td>
-<td>备份DNS服务器为空</td>
-<td>172.20.99.165</td>
+<td>探针服务器为空</td>
+<td>淘点探针服务</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
 <td>${space}</td>
-<td>2.2.2.2</td>
-<td></td>
+<td>1</td>
+<td>300</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server</td>
-<td>@{dns_template}</td>
+<td>Add Probe Server</td>
+<td>@{probe_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
+<td>Check Probe Server Exception</td>
+<td>@{probe_template}</td>
 <td></td>
 <td></td>
 </tr>
@@ -899,7 +654,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNS_Server2_Exception_pull">NMS_DNS_Server2_Exception_pull</a></td>
+<td class="name"><a name="test_NMS_Probe_Server_Exception_Pull">NMS_Probe_Server_Exception_Pull</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -916,7 +671,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>探针服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -929,42 +684,42 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
-<td></td>
+<td>探针服务器：新增</td>
+<td>模板名称</td>
+<td>探针服务器类型</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>@{dns_template}=</td>
+<td>...</td>
+<td># 探针服务器地址</td>
+<td>探针服务器端口</td>
+<td>上报时间间隔</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{probe_template}=</td>
 <td>create List</td>
-<td>备份DNS服务器为#</td>
-<td>172.20.99.165</td>
+<td>探针服务器为#</td>
+<td>淘点探针服务</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
 <td>\#</td>
-<td>3.3.3.3</td>
-<td></td>
+<td>1</td>
+<td>300</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server Exception</td>
-<td>@{dns_template}</td>
+<td>Add Probe Server</td>
+<td>@{probe_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
-<td></td>
+<td>Check Probe Server Exception</td>
+<td>@{probe_template}</td>
 <td></td>
 <td></td>
 </tr>
@@ -976,7 +731,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNS_Server3_space">NMS_DNS_Server3_space</a></td>
+<td class="name"><a name="test_NMS_Probe_Port_Exception_Space">NMS_Probe_Port_Exception_Space</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -993,7 +748,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>探针服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -1006,42 +761,42 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{dns_template}=</td>
-<td>create List</td>
-<td>DNS服务器3为空</td>
-<td>172.20.99.166</td>
+<td>探针服务器：新增</td>
+<td>模板名称</td>
+<td>探针服务器类型</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>172.20.99.165</td>
+<td># 探针服务器地址</td>
+<td>探针服务器端口</td>
+<td>上报时间间隔</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{probe_template}=</td>
+<td>create List</td>
+<td>探针服务器端口为空</td>
+<td>淘点探针服务</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1.cn</td>
 <td>${space}</td>
-<td></td>
+<td>300</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server</td>
-<td>@{dns_template}</td>
+<td>Add Probe Server</td>
+<td>@{probe_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
+<td>Check Probe Server Exception</td>
+<td>@{probe_template}</td>
 <td></td>
 <td></td>
 </tr>
@@ -1053,7 +808,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNS_Server3_Exception_pull">NMS_DNS_Server3_Exception_pull</a></td>
+<td class="name"><a name="test_NMS_Probe_Port_Exception_Pull">NMS_Probe_Port_Exception_Pull</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -1070,7 +825,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>探针服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -1083,42 +838,42 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{dns_template}=</td>
-<td>create List</td>
-<td>DNS服务器3为#</td>
-<td>172.20.99.166</td>
+<td>探针服务器：新增</td>
+<td>模板名称</td>
+<td>探针服务器类型</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>172.20.99.165</td>
+<td># 探针服务器地址</td>
+<td>探针服务器端口</td>
+<td>上报时间间隔</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{probe_template}=</td>
+<td>create List</td>
+<td>探针服务器端口为#</td>
+<td>淘点探针服务</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1.cn</td>
 <td>\#</td>
-<td></td>
+<td>300</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server Exception</td>
-<td>@{dns_template}</td>
+<td>Add Probe Server</td>
+<td>@{probe_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
-<td></td>
+<td>Check Probe Server Exception</td>
+<td>@{probe_template}</td>
 <td></td>
 <td></td>
 </tr>
@@ -1130,7 +885,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNS_DeleteAll">NMS_DNS_DeleteAll</a></td>
+<td class="name"><a name="test_NMS_Probe_Interval_Exception_Space">NMS_Probe_Interval_Exception_Space</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -1147,7 +902,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>探针服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -1160,41 +915,195 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>删除所有DNS服务器</td>
+<td>探针服务器：新增</td>
+<td>模板名称</td>
+<td>探针服务器类型</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td># 探针服务器地址</td>
+<td>探针服务器端口</td>
+<td>上报时间间隔</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{probe_template}=</td>
+<td>create List</td>
+<td>上报时间间隔为空</td>
+<td>淘点探针服务</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1.cn</td>
+<td>3000</td>
+<td>${space}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Probe Server</td>
+<td>@{probe_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>@{dns_template}=</td>
+<td>Check Probe Server Exception</td>
+<td>@{probe_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_Probe_Interval_Exception_Pull">NMS_Probe_Interval_Exception_Pull</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>探针服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>探针服务器：新增</td>
+<td>模板名称</td>
+<td>探针服务器类型</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td># 探针服务器地址</td>
+<td>探针服务器端口</td>
+<td>上报时间间隔</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{probe_template}=</td>
+<td>create List</td>
+<td>上报时间间隔为#</td>
+<td>淘点探针服务</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1.cn</td>
+<td>3000</td>
+<td>\#</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Probe Server</td>
+<td>@{probe_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check Probe Server Exception</td>
+<td>@{probe_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_Probe_Server_DeleteAll">NMS_Probe_Server_DeleteAll</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>探针服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>探针服务器：新增</td>
+<td>模板名称</td>
+<td>探针服务器类型</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td># 探针服务器地址</td>
+<td>探针服务器端口</td>
+<td>上报时间间隔</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{probe_template}=</td>
 <td>create List</td>
 <td>删除所有</td>
-<td>172.20.99.166</td>
+<td>UDP探针服务</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>172.20.99.165</td>
 <td>1.1.1.1</td>
-<td></td>
+<td>1</td>
+<td>5</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Delete DNS Server</td>
-<td></td>
+<td>Add Probe Server</td>
+<td>@{probe_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
+<td>Delete Probe Server All</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1207,7 +1116,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNS_Add_Max">NMS_DNS_Add_Max</a></td>
+<td class="name"><a name="test_NMS_ProbeServer_Add_Max">NMS_ProbeServer_Add_Max</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -1224,7 +1133,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>探针服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -1237,13 +1146,20 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
-<td></td>
+<td>探针服务器：新增</td>
+<td>模板名称</td>
+<td>探针服务器类型</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>: FOR</td>
+<td>...</td>
+<td># 探针服务器地址</td>
+<td>探针服务器端口</td>
+<td>上报时间间隔</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>:FOR</td>
 <td>${i}</td>
 <td>IN RANGE</td>
 <td>1</td>
@@ -1258,119 +1174,35 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td></td>
-<td>@{dns_template}=</td>
+<td>@{probe_template}=</td>
 <td>create List</td>
-<td>template_${i}</td>
+<td>probetemplate_${i}</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td></td>
 <td>...</td>
-<td>172.20.99.166</td>
-<td>172.20.99.165</td>
+<td>UDP探针服务</td>
+<td>192.20.99.1</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td></td>
 <td>...</td>
-<td>1.2.2.2</td>
-<td></td>
+<td>100</td>
+<td>50</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
+<td>Add Probe Server</td>
+<td>@{probe_template}</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>Sleep</td>
 <td>5</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"><a name="test_NMS_DNS_template_Exception_illegal">NMS_DNS_template_Exception_illegal</a></td>
-<td>Login NMS Web</td>
-<td>172.20.99.166</td>
-<td>auto_nms_003@commsky.com</td>
-<td>commsky</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{list}=</td>
-<td>create List</td>
-<td>配置</td>
-<td>组件管理</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>...</td>
-<td>服务组件</td>
-<td>DNS服务器</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Go To Component Sub Page</td>
-<td>@{list}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{dns_template}=</td>
-<td>create List</td>
-<td>"template"+"1"</td>
-<td>172.20.99.165</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>...</td>
-<td>172.20.99.165</td>
-<td>30</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Comment</td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Comment</td>
-<td>Check DNS Server Exception</td>
-<td>@{dns_template}</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>[Teardown]</td>
-<td></td>
 <td></td>
 <td></td>
 </tr>

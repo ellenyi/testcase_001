@@ -1,0 +1,377 @@
+*** Setting ***
+Library           Userdefined    # Library | OperatingSystem
+Library           Telnet
+Library           Selenium2Library
+Resource          C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//common_resource.html
+Resource          C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//web_resource.html
+
+*** Variables ***
+${AP4604_MAC_IP}    34-CD-6D-B0-11-C0
+${WLANGROUP_Multicard}    BMW
+${WLANGROUP_Singlecard}    BYD
+
+*** Test Cases ***
+CloudNMS_Login_1
+    Open Browser    ${web_IP}
+
+*** Keyword ***
+Logon AC web
+    [Arguments]    ${web_IP}    ${username}    ${password}
+    [Documentation]    This keyword check AP current version
+    Open Browser    ${web_IP}
+    Maximize Browser Window
+    Input Text    name=UserName    ${username}
+    Input Text    name=PassWord    ${password}
+    sleep    2
+    Click button    name=LoginChinese
+    Comment    Click button    css=.btn
+    ${regr}    ${result}=    Run Keyword And Ignore Error    Alert Should Be Present    text= ${licencetext_chinese}
+    sleep    3
+    Comment    ${title}    Get Title
+    Comment    Title Should Be    ${title}
+
+WLAN config
+    [Arguments]    ${Add_WLANGROUP}    ${securityMode}    ${Security Policy}    ${Ssid}    ${LocalizedSsid}    ${CharacterSet}
+    ...    ${HideSsid}    ${VlanID}    ${QosLevel}    ${MaxUserNum}    ${MacAclPolicy}    ${TrafficLimitType}
+    ...    ${MaxTraffic}    ${UserMaxTraffic}    ${MaxSsidUpTraffic}    ${MaxUserUpTraffic}    ${TransmitType}    ${LayerType}
+    ...    ${ProbeRespMode}    ${accLocation}    ${sendLocAdv}    ${PerPackagePCEnable}    ${WtpForwardingMode}
+    Go To    ${WLAN_Groups}
+    sleep    2
+    Input Text    name=aWlanGroupName    ${Add_WLANGROUP}
+    Click button    name=add_btn
+    sleep    2
+    Input Text    name=filter_wlangroup_input    ${Add_WLANGROUP}
+    sleep    2
+    Click button    name=filter_btn
+    Select Checkbox    name=items
+    sleep    2
+    Click Link    xpath=//*[@id='tbl']/tbody/tr[2]/td[4]/a
+    sleep    5
+    Click Link    xpath=html/body/div/form/table[2]/tbody/tr[1]/td[1]/span[1]/a
+    sleep    5
+    Select From List By Index    name=SecurityMode    ${securityMode}
+    Run Keyword If    '${securityMode} '=='2'    Select From List By Index    name=Security Policy    ${Security Policy}    else    pass
+    Input Text    name=Ssid    ${Ssid}
+    Input Text    id=LocalizedSsid    ${LocalizedSsid}
+    Select From List By Index    name=CharacterSet    ${CharacterSet}
+    Select From List By Index    name=HideSsid    ${HideSsid}
+    Input Text    name=VlanID    ${VlanID}
+    Select From List By Index    name=QosLevel    ${QosLevel}
+    Input Text    name=MaxUserNum    ${MaxUserNum}
+    Select From List By Index    name=MacAclPolicy    ${MacAclPolicy}
+    Select From List By Index    name=TrafficLimitType    ${TrafficLimitType}
+    Input Text    name=MaxTraffic    ${MaxTraffic}
+    Input Text    name=UserMaxTraffic    ${UserMaxTraffic}
+    Input Text    name=MaxSsidUpTraffic    ${MaxSsidUpTraffic}
+    Input Text    name=MaxUserUpTraffic    ${MaxUserUpTraffic }
+    Select From List By Index    name=TransmitType    ${TransmitType}
+    Run Keyword If    '${TransmitType}'=='1'    Select From List By Index    name=LayerType    ${LayerType}
+    ...    ELSE IF    '${TransmitType}'=='2'    Select From List By Index    name=WtpForwardingMode    ${WtpForwardingMode}
+    ...    ELSE    '${TransmitType}'==‘0'    pass
+    Select From List By Index    name=LayerType    ${LayerType}
+    Select From List By Index    name=ProbeRespMode    ${ProbeRespMode}
+    Select From List By Index    name=accLocation    ${accLocation}
+    Select From List By Index    name=sendLocAdv    ${sendLocAdv}
+    Select From List By Index    name=PerPackagePCEnable    ${PerPackagePCEnable}
+    Click button    name=save
+
+AP Policy Apply
+    [Arguments]    ${AP_Group}    ${selectdboard}    ${selecttunnel}    ${WLAN_group}
+    Go To    ${AP_Policy_Apply}
+    sleep    15
+    Click button    name=show_other_btn
+    Input Text    name=ap_group_name    ${AP_Group}
+    Select From List By Label    name=aRelatedboard    ${selectdboard}
+    Select From List By Index    name=aBindTunnel    ${selecttunnel}
+    Click button    name=add_btn
+    Get Alert Message    Are you sure to add ?
+    sleep    15
+    Select From List By Value    name=group_filter_input    ${AP_Group}
+    sleep    15
+    Select Checkbox    id=id_check_to_modify_0
+    sleep    15
+    Select From List By Label    id=id_WlanGroupId_0    ${WLAN_group}
+    Select From List By Label    id=id_Relatedboard_0    ${selectdboard}
+    Select From List By Value    id=id_BindTunnel_0    ${selecttunnel}
+    Click button    id=id_save_btn_0
+    Get Alert Message    Are you sure to modify this association?
+
+Delete WLAN group
+    [Arguments]    ${Add_WLANGROUP}
+    Go To    ${WLAN_Groups}
+    sleep    2
+    Input Text    name=filter_wlangroup_input    ${Add_WLANGROUP}
+    sleep    2
+    Click button    name=filter_btn
+    sleep    2
+    Select Checkbox    name=items
+    Click Link    xpath=html/body/div/form/table[4]/tbody/tr[1]/td[1]/span/a
+    Get Alert Message    Attention：this operation will delete all the wlan in the wlan group you select, continue?
+
+WLAN-VLAN
+    [Arguments]    ${Add_new_wlan}    ${index}    ${i}    ${VlanID}
+    Go To    ${WLAN_VLAN_Association}
+    sleep    2
+    Select From List By Label    id=id_WlanGroupId_additem    ${Add_new_wlan}
+    ${regr}    ${result}=    Run Keyword And Ignore Error    Select From List    id=id_WlanId_additem    ${index}
+    Input Text    id=id_VlanId_${i}    ${VlanID}
+    Input Text    id=id_StackVlanId_${i}    0
+    Click button    name=add_btn
+    sleep    5
+
+Add AP version
+    [Arguments]    ${Device_Type}    ${Hardware_Version}
+    Go To    ${AP_Version}
+    sleep    2
+    Click Link    xpath=html/body/div/form/table[2]/tbody/tr/td/span[1]/a
+    sleep    2
+    Input Text    name=Manufactory    CommSky
+    Input Text    name=EquipModel    ${Device_Type}
+    Input Text    name=HardVer    ${Hardware_Version}
+    Select From List By Index    id=idVersionType    0
+
+Add AP group
+    [Arguments]    ${AP_MAC_IP}    ${AP_Group}    ${Device_Type}    ${selectdboard}    ${selecttunnel}
+    Go To    ${AP_Configuration}
+    sleep    3
+    Click button    id=show_other_btn
+    Input Text    name=aApMac    ${AP_MAC_IP}
+    Select From List By Label    name=aGroupName    ${AP_Group}
+    sleep    3
+    Input Text    id=aApName    ${Device_Type}
+    Select From List By Label    name=aRelatedboard    ${selectdboard}
+    Select From List By Label    name=aBindTunnel    ${selecttunnel}
+    Click button    name=add_btn
+    Get Alert Message    Add this AP to group "AP4604-TA"？
+    sleep    3
+    Comment    Click button    id=inportCSV
+    Comment    Input Text    name=newcsv    ${AP_CSV_File}
+    Comment    sleep    2
+    Comment    Click button    name=upload_btn
+
+Check AP Information
+    selectFrame    MenuBar
+    selectWindow    name=Selector
+    Click button    id=text
+
+Upgrade AP by AC
+    [Arguments]    ${AP_Group}
+    Logon AC web    ${AC_url}    ${AC_username}    ${AC_password}
+    selectFrame    MenuBar
+    Click Element    xpath=//a[5]/b
+    sleep    10
+    Go To    ${AP_Upgrade}
+    sleep    10
+    Select From List By Value    name=filter_combox    group
+    Input Text    name=filter_input    ${AP_Group}
+    Click button    name=filter_btn
+    sleep    10
+    Select Checkbox    name=all
+    Click Link    xpath=html/body/div/form/table[3]/tbody/tr[1]/td[1]/a[1]
+    sleep    10
+    Click button    css=input[type="button"]
+    Get Alert Message    Are you sure to upgrade AP? This operation will cost a long time.
+    sleep    300
+
+Add AP Version for upgrade
+    [Arguments]    ${Device_Type}    ${Hardware_Version}    ${Update_Type}    ${upgradeDesc}    ${Dstversion}    ${Update_path}
+    Go To    ${AP_Version}
+    sleep    5
+    Click Link    xpath=html/body/div/form/table[2]/tbody/tr/td/span[1]/a
+    sleep    10
+    Input Text    name=Manufactory    CommSky
+    Input Text    name=EquipModel    ${Device_Type}
+    Input Text    name=HardVer    ${Hardware_Version}
+    Select From List By Value    id=idVersionType    ${Update_Type}
+    Input Text    name=UpdateDesc    ${upgradeDesc}
+    Input Text    name=DstVersion    ${Dstversion}
+    Click button    xpath=//*[@id='tr_path_type']/td[2]/input[2]
+    Input Text    name=upload_file    ${Update_path}
+    Click button    css=input[type="submit"]
+    Get Alert Message    Are you sure to modify it?
+    sleep    60
+
+Add new radio card
+    [Arguments]    ${AP_Group}    ${radio_model}    ${channel_number}    ${power_config_model}    ${power}    ${RF_switch}
+    Go To    ${AP_Configuration}
+    sleep    2
+    Select From List By Label    name=group_filter_input    ${AP_Group}
+    Select Checkbox    id=id_check_to_modify_0
+    Click button    id=id_show_netWCard_btn
+    sleep    2
+    Select From List By Value    id=id_AddMode    ${radio_model}
+    Select From List By Value    name=netWCard_Channel    ${channel_number}
+    Select From List By Value    name=netWCard_PowerCfgType    ${power_config_model}
+    Run Keyword If    '${power_config_model}'=='1'    Select From List By Value    name=netWCard_Capacity    ${power}
+    ...    ELSE IF    '${power_config_model}'=='5'    Input Text    name=netWCard_PowerValueDBM    ${power}
+    ...    ELSE    '${power_config_model}'=='0'    pass
+    Select From List By Value    id=id_radiosSwitch_0    ${RF_switch}
+    Click button    name=netWCard_add_btn
+    Get Alert Message    Add radio 2 to AP（${AP4604_MAC_IP}）？
+    sleep    2
+
+AP parameter config
+    [Arguments]    ${AP_Group}    ${radio_id}    ${radio_model}    ${channel_number}    ${power_config_model}    ${power}
+    ...    ${RF_switch}
+    Go To    ${AP_Configuration}
+    sleep    2
+    Select From List By Value    name=group_filter_input    ${AP_Group}
+    Select Checkbox    id=id_check_to_modify_0
+    sleep    2
+    Select From List By Value    name=netWCard[0]    ${radio_id}
+    Select From List By Value    name=mode[0]    ${radio_model}
+    Select From List    name=channel[0]    ${channel_number}
+    Comment    Select From List By Index    name=PowerCfgType[0]    ${power_config_model}
+    Comment    Run Keyword If    '${power_config_model}'=='0'    Select From List By Value    name=capacity[0]    ${power}
+    ...    ELSE IF    '${power_config_model}'=='1'    Input Text    id=id_PowerValueDBM_0    ${power}
+    ...    ELSE    '${power_config_model}'=='2'    pass
+    Comment    Select From List By Value    id=id_radiosSwitch_0    ${RF_switch}
+    Click button    name=save_btn
+    sleep    2
+
+Import AP CSV file
+    Go To    ${AP_Configuration}
+    sleep    15
+    Click button    id=inportCSV
+    Input Text    name=newcsv    ${AP_CSV_File}
+    Click button    name=upload_btn
+
+security with WEP model
+    [Arguments]    ${securityname}    ${SecurityMode}    ${keylength}    ${KeyIndex}    ${key1}    ${key2}
+    ...    ${key3}    ${key4}
+    selectFrame    MenuBar
+    Click element    xpath=//a[3]/b
+    sleep    2
+    Go To    ${WLAN_seurity}
+    sleep    2
+    Click Link    xpath=html/body/div/form/table[2]/tbody/tr/td[1]/span[1]/a
+    Input Text    name=SecurityName    ${securityname}
+    Input Text    name=SecurityMode    ${SecurityMode}
+    Select From List By Value    name=KeyLength    ${keylength}
+    Select From List By Value    name=KeyIndex    ${KeyIndex}
+    Input Text    name=Key1    ${key1}
+    Input Text    name=Key2    ${key2}
+    Input Text    name=Key3    ${key3}
+    Input Text    name=Key4    ${key4}
+    click    name=save
+
+security with 802_11i model
+    [Arguments]    ${securityname}    ${SecurityMode}    ${Authentication_model}    ${Encrypt_way}    ${password}
+    selectFrame    MenuBar
+    Click element    xpath=//a[3]/b
+    sleep    2
+    Go To    ${WLAN_seurity}
+    sleep    2
+    Click Link    xpath=html/body/div/form/table[2]/tbody/tr/td[1]/span[1]/a
+    Input Text    name=SecurityName    ${securityname}
+    Select From List By Value    name=SecurityMode    ${SecurityMode}
+    Select From List By Value    name=Auth    ${Authentication_model}
+    Run Keyword If    '${Authentication_model}'=='1'    select encrpt way and input password    ${Encrypt_way}    ${password}
+    Run Keyword If    '${Authentication_model}'=='2'    Select From List By Value    name=Encrypt    ${Encrypt_way}
+    Run Keyword If    '${Authentication_model}'=='3'    select encrpt way and input password    ${Encrypt_way}    ${password}
+    Run Keyword If    '${Authentication_model}'=='4'    select encrpt way and input password    ${Encrypt_way}    ${password}
+    Run Keyword If    '${Authentication_model}'=='5'    Select From List By Value    name=Encrypt    ${Encrypt_way}
+    Run Keyword If    '${Authentication_model}'=='6'    Select From List By Value    name=Encrypt    ${Encrypt_way}
+    Click button    name=save
+
+select encrpt way and input password
+    [Arguments]    ${Encrypt_way}    ${password}
+    Select From List By Value    name=Encrypt    ${Encrypt_way}
+    Input Text    name=Key    ${password}
+
+security with WAPI model
+    [Arguments]    ${securityname}    ${SecurityMode}    ${Authentication_model}    ${password}
+    selectFrame    MenuBar
+    Click element    xpath=//a[3]/b
+    sleep    2
+    Go To    ${WLAN_seurity}
+    sleep    2
+    Click Link    xpath=html/body/div/form/table[2]/tbody/tr/td[1]/span[1]/a
+    Input Text    name=SecurityName    ${securityname}
+    Input Text    name=SecurityMode    ${SecurityMode}
+    Select From List By Value    name=Auth    ${Authentication_model}
+    Run Keyword If    '${Authentication_model}'=='0'    Input Text    name=Key    ${password}
+    ...    ELSE    pass
+    click    name=save
+
+Delete_AP_Group
+    [Arguments]    ${AP_Group}
+    Go To    ${AP_Configuration}
+    sleep    2
+    Select From List By Label    name=group_filter_input    ${AP_Group}
+    Select Checkbox    name=all
+    sleep    2
+    Click link    xpath=//*[@id='deleteAP2']
+    sleep    2
+    Get Alert Message    This operation will lead to deletion of some APs, continue to delete?
+    sleep    2
+
+Delete_AP_policy
+    [Arguments]    ${AP_Group}
+    Go To    ${AP_Policy_Apply}
+    sleep    2
+    Select From List By Label    name=group_filter_input    ${AP_Group}
+    sleep    2
+    Select Checkbox    id=id_check_to_modify_0
+    sleep    2
+    Click button    name=delete_btn
+    Get Alert Message    Are you sure to delete it?
+    sleep    2
+
+Delete_security_config
+    selectFrame    MenuBar
+    Click element    xpath=//a[3]/b
+    sleep    2
+    Go To    ${WLAN_seurity}
+    sleep    2
+    Select Checkbox    name=sel
+    Click link    xpath=html/body/div/form/table[2]/tbody/tr/td[1]/span[3]/a
+    Get Alert Message    Are you sure to delete it?
+    sleep    2
+
+Add_version_download_server
+    Modify_AP_download_server_password
+    Go To    ${verion_download_server}
+    sleep    5
+    Click link    xpath=html/body/div/form/table[2]/tbody/tr/td/span[1]/a
+    Input Text    name=ServerIp    ${AC_INFO["IP"]}
+    Input Text    name=ServerPort    21
+    Input Text    name=User    vupdate
+    Input Text    name=Passwd    vupdate
+    Input Text    name=checkPasswd    vupdate
+    Click button    css=input[type="button"]
+    Get Alert Message    Are you sure to modify it?
+    sleep    5
+
+Delete_version_download_server
+    Go To    ${verion_download_server}
+    sleep    2
+    Click link    xpath=html/body/div/form/table[2]/tbody/tr/td/span[3]/a
+    Input Text    name=ServerIp    ${AC_INFO["IP"]}
+    Input Text    name=ServerPort    21
+    Input Text    name=User    vupdate
+    Input Text    name=Passwd    vupdate
+    Input Text    name=checkPasswd    vupdate
+    Click button    xpath=html/body/div/form/table[2]/tbody/tr/td/span[3]/a
+    Get Alert Message    Are you sure to delete it?
+    sleep    2
+
+wireless model config
+    [Arguments]    ${AP_Group}    ${space_flow}    ${bandwidth}    ${gap}
+    Select From List By Value    name=group_filter_input    ${AP_Group}
+    Select Checkbox    id=id_check_to_modify_0
+    Click link    xpath=//*[@id='tbl']/tbody/tr[2]/td[19]/a
+    Wait Until Page Contains Element    xpath=html/body/div/p    5
+    Wait Until Element Is Visible    xpath=html/body/div/p    5
+    Wait Until Page Contains    Wireless Mode Configuration    5
+    Select Window    name=Advanced Configuration of AP Wireless
+    Go To    ${Wireless_mode_config}
+    sleep    5
+    Select From List By Value    name=SpatialMultiplexing    ${space_flow}
+    Select From List By Value    name=ChannelBandwidth    ${bandwidth}
+    Select From List By Value    name=ShortGI    ${gap}
+    Click button    css=input[type="button"]
+    ${regr}    ${result}=    Run Keyword And Ignore Error    Get Alert Message    You didn't change any configuration,reissue this configuration?
+    ${regr}    ${result}=    Run Keyword And Ignore Error    Get Alert Message    Are you sure to modify it?
+    sleep    10
+    Close Window

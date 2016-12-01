@@ -62,7 +62,7 @@ td.name, th.name {
 </tr>
 <tr>
 <td class="name">Test Teardown</td>
-<td>NMS_TestCase_Teardown</td>
+<td>Delete NTP Server All</td>
 <td></td>
 <td></td>
 <td></td>
@@ -160,7 +160,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>NTP服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -173,7 +173,7 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>DNS服务器</td>
+<td>NTP服务器</td>
 <td></td>
 <td></td>
 </tr>
@@ -192,7 +192,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNSServer_Add">NMS_DNSServer_Add</a></td>
+<td class="name"><a name="test_NMS_NTPServer_Add">NMS_NTPServer_Add</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -209,7 +209,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>NTP服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -222,42 +222,35 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
+<td>NTP服务器：新增</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>@{dns_template}=</td>
+<td>@{ntp_template}=</td>
 <td>create List</td>
-<td>AddDNS</td>
-<td>172.20.99.166</td>
+<td>AddNTP</td>
+<td>86400</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>172.20.99.165</td>
+<td>time.nist.gov</td>
+<td>time.windows.com</td>
 <td>1.1.1.1</td>
-<td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server</td>
-<td>@{dns_template}</td>
+<td>Add NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
+<td>Check NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
@@ -269,7 +262,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNSServer_Min">NMS_DNSServer_Min</a></td>
+<td class="name"><a name="test_NMS_NTPServer_Template_Min">NMS_NTPServer_Template_Min</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -286,62 +279,48 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>NTP服务器</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>Go To Component Sub Page</td>
 <td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>...</td>
-<td># 模板名称：1个字符</td>
-<td>DNS服务器1：</td>
-<td># DNS服务器2</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>...</td>
-<td># DNS服务器3：最小10s</td>
+<td>NTP服务器：新增</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>@{dns_template}=</td>
+<td>@{ntp_template}=</td>
 <td>create List</td>
-<td>T</td>
-<td>172.20.99.166</td>
+<td>时</td>
+<td>60</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>172.20.99.165</td>
+<td>time.nist.gov</td>
+<td>time.windows.com</td>
 <td>1.1.1.1</td>
-<td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server</td>
-<td>@{dns_template}</td>
+<td>Add NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
+<td>Check NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
@@ -353,7 +332,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNSServer_Max">NMS_DNSServer_Max</a></td>
+<td class="name"><a name="test_NMS_NTPServer_Template_Max">NMS_NTPServer_Template_Max</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -370,62 +349,48 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>NTP服务器</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>Go To Component Sub Page</td>
 <td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>...</td>
-<td># 模板名称最长：32个字符</td>
-<td>DNS服务器1</td>
-<td># DNS服务器2</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>...</td>
-<td># DNS服务器3</td>
-<td></td>
+<td>NTP服务器：新增</td>
+<td>NTP模板名称：最长32</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>@{dns_template}=</td>
+<td>@{ntp_template}=</td>
 <td>create List</td>
-<td>12345678901234567890123456789012</td>
-<td>172.20.99.166</td>
+<td>NTP45678901234567890123456789012</td>
+<td>86400</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>172.20.99.165</td>
-<td>1.1.1.1</td>
-<td></td>
+<td>time.nist.gov</td>
+<td>time.windows.com</td>
+<td>255.255.255.255</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server</td>
-<td>@{dns_template}</td>
+<td>Add NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
+<td>Check NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
@@ -437,7 +402,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNSServer_Middle">NMS_DNSServer_Middle</a></td>
+<td class="name"><a name="test_NMS_NTPServer_Template_Middle">NMS_NTPServer_Template_Middle</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -454,7 +419,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>NTP服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -467,42 +432,35 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
+<td>NTP服务器：新增</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>@{dns_template}=</td>
+<td>@{ntp_template}=</td>
 <td>create List</td>
-<td>常规dns务模板</td>
-<td>172.20.99.166</td>
+<td>NTP模板间隔</td>
+<td>43200</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>172.20.99.165</td>
-<td>1.1.1.1</td>
-<td></td>
+<td>time.nist.gov</td>
+<td>time.windows.com</td>
+<td>192.168.2.2</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server</td>
-<td>@{dns_template}</td>
+<td>Add NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
+<td>Check NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
@@ -514,7 +472,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNS_Server1_Min">NMS_DNS_Server1_Min</a></td>
+<td class="name"><a name="test_NMS_NTP_Server1_Min">NMS_NTP_Server1_Min</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -531,7 +489,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>NTP服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -544,42 +502,35 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
+<td>NTP服务器：新增</td>
+<td>NTP服务器：最小</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>@{dns_template}=</td>
+<td>@{ntp_template}=</td>
 <td>create List</td>
-<td>DNS服务器长度最短</td>
-<td>1.1.1.2</td>
+<td>NTPServer1_Min</td>
+<td>86400</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>172.20.99.165</td>
-<td>2.2.2.2</td>
-<td></td>
+<td>1.cn</td>
+<td>2.cn</td>
+<td>3.cn</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server</td>
-<td>@{dns_template}</td>
+<td>Add NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
+<td>Check NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
@@ -591,7 +542,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNS_Server1_Max">NMS_DNS_Server1_Max</a></td>
+<td class="name"><a name="test_NMS_NTP_Server1_Max">NMS_NTP_Server1_Max</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -608,7 +559,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>NTP服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -621,42 +572,35 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
+<td>NTP服务器：新增</td>
+<td>NTP服务器：最长</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>@{dns_template}=</td>
+<td>@{ntp_template}=</td>
 <td>create List</td>
-<td>DNS服务器长度最长</td>
-<td>254.254.254.254</td>
+<td>NTPServer1_Max</td>
+<td>86400</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>172.20.99.165</td>
-<td>2.2.2.2</td>
-<td></td>
+<td>12345678901234567890123456789.cn</td>
+<td>S2345678901234567890123456789.cn</td>
+<td>Three678901234567890123456789.cn</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server</td>
-<td>@{dns_template}</td>
+<td>Add NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
+<td>Check NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
@@ -668,7 +612,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNS_Server1_space">NMS_DNS_Server1_space</a></td>
+<td class="name"><a name="test_NMS_NTP_Server1_Middle">NMS_NTP_Server1_Middle</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -685,7 +629,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>NTP服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -698,42 +642,35 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
+<td>NTP服务器：新增</td>
+<td>NTP服务器：正常</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>@{dns_template}=</td>
+<td>@{ntp_template}=</td>
 <td>create List</td>
-<td>主DNS服务器为空</td>
-<td>${space}</td>
+<td>NTPServer1_Middle</td>
+<td>86400</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>172.20.99.165</td>
-<td>1.1.1.1</td>
-<td></td>
+<td>1234567890123456.time.com</td>
+<td>12345678901234.time.com</td>
+<td>tryget.time.com</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server</td>
-<td>@{dns_template}</td>
+<td>Add NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
+<td>Check NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
@@ -745,7 +682,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNS_Server1_Exception_pull">NMS_DNS_Server1_Exception_pull</a></td>
+<td class="name"><a name="test_NMS_NTP_Server1_Space">NMS_NTP_Server1_Space</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -762,7 +699,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>NTP服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -775,119 +712,35 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
+<td>NTP服务器：新增</td>
+<td>NTP服务器：为空</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>@{dns_template}=</td>
+<td>@{ntp_template}=</td>
 <td>create List</td>
-<td>主DNS服务器为#</td>
-<td>\#</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>...</td>
-<td>172.20.99.165</td>
-<td>172.20.99.164</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server Exception</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>[Teardown]</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"><a name="test_NMS_DNS_Server2_space">NMS_DNS_Server2_space</a></td>
-<td>Login NMS Web</td>
-<td>172.20.99.166</td>
-<td>auto_nms_003@commsky.com</td>
-<td>commsky</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{list}=</td>
-<td>create List</td>
-<td>配置</td>
-<td>组件管理</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>...</td>
-<td>服务组件</td>
-<td>DNS服务器</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Go To Component Sub Page</td>
-<td>@{list}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{dns_template}=</td>
-<td>create List</td>
-<td>备份DNS服务器为空</td>
-<td>172.20.99.165</td>
+<td>NTPServer1_Empty</td>
+<td>86400</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
 <td>${space}</td>
-<td>2.2.2.2</td>
-<td></td>
+<td>12345678901234.time.com</td>
+<td>tryget.time.com</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server</td>
-<td>@{dns_template}</td>
+<td>Add NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
+<td>Check NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
@@ -899,7 +752,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNS_Server2_Exception_pull">NMS_DNS_Server2_Exception_pull</a></td>
+<td class="name"><a name="test_NMS_NTP_Server2_Space">NMS_NTP_Server2_Space</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -916,7 +769,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>NTP服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -929,119 +782,35 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
+<td>NTP服务器：新增</td>
+<td>NTP服务器：为空</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>@{dns_template}=</td>
+<td>@{ntp_template}=</td>
 <td>create List</td>
-<td>备份DNS服务器为#</td>
-<td>172.20.99.165</td>
+<td>NTPServer2_Empty</td>
+<td>86400</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>\#</td>
-<td>3.3.3.3</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server Exception</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>[Teardown]</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"><a name="test_NMS_DNS_Server3_space">NMS_DNS_Server3_space</a></td>
-<td>Login NMS Web</td>
-<td>172.20.99.166</td>
-<td>auto_nms_003@commsky.com</td>
-<td>commsky</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{list}=</td>
-<td>create List</td>
-<td>配置</td>
-<td>组件管理</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>...</td>
-<td>服务组件</td>
-<td>DNS服务器</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Go To Component Sub Page</td>
-<td>@{list}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{dns_template}=</td>
-<td>create List</td>
-<td>DNS服务器3为空</td>
-<td>172.20.99.166</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>...</td>
-<td>172.20.99.165</td>
+<td>12345678901234.time.com</td>
 <td>${space}</td>
-<td></td>
+<td>tryget.time.com</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server</td>
-<td>@{dns_template}</td>
+<td>Add NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
+<td>Check NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
@@ -1053,7 +822,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNS_Server3_Exception_pull">NMS_DNS_Server3_Exception_pull</a></td>
+<td class="name"><a name="test_NMS_NTP_Server3_Space">NMS_NTP_Server3_Space</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -1070,7 +839,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>NTP服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -1083,42 +852,105 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
+<td>NTP服务器：新增</td>
+<td>NTP服务器：为空</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>@{dns_template}=</td>
+<td>@{ntp_template}=</td>
 <td>create List</td>
-<td>DNS服务器3为#</td>
-<td>172.20.99.166</td>
+<td>NTPServer3_Empty</td>
+<td>86400</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>172.20.99.165</td>
+<td>${space}</td>
+<td>12345678901234.time.com</td>
+<td>${space}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add NTP Server</td>
+<td>@{ntp_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check NTP Server</td>
+<td>@{ntp_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_NTP_Server1_Exeption_Pull">NMS_NTP_Server1_Exeption_Pull</a></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>服务组件</td>
+<td>NTP服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>NTP服务器：新增</td>
+<td>NTP服务器：为空</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{ntp_template}=</td>
+<td>create List</td>
+<td>NTPServer1_Pull</td>
+<td>86400</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
 <td>\#</td>
-<td></td>
+<td>12345678901234.time.com</td>
+<td>tryget.time.com</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Check DNS Server Exception</td>
-<td>@{dns_template}</td>
+<td>Add NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>[Teardown]</td>
-<td></td>
+<td>Check NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
@@ -1130,7 +962,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNS_DeleteAll">NMS_DNS_DeleteAll</a></td>
+<td class="name"><a name="test_NMS_NTP_DeleteAll">NMS_NTP_DeleteAll</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -1147,7 +979,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>NTP服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -1160,42 +992,35 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>删除所有DNS服务器</td>
-<td></td>
+<td>NTP服务器：新增</td>
+<td>NTP服务器：为空</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>@{dns_template}=</td>
+<td>@{ntp_template}=</td>
 <td>create List</td>
 <td>删除所有</td>
-<td>172.20.99.166</td>
+<td>86400</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>...</td>
-<td>172.20.99.165</td>
-<td>1.1.1.1</td>
-<td></td>
+<td>${space}</td>
+<td>12345678901234.time.com</td>
+<td>${space}</td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Delete DNS Server</td>
-<td></td>
+<td>Add NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>[Teardown]</td>
-<td></td>
+<td>Delete NTP Server All</td>
 <td></td>
 <td></td>
 </tr>
@@ -1207,7 +1032,7 @@ td.name, th.name {
 <td></td>
 </tr>
 <tr>
-<td class="name"><a name="test_NMS_DNS_Add_Max">NMS_DNS_Add_Max</a></td>
+<td class="name"><a name="test_NMS_NTP_Add_Max">NMS_NTP_Add_Max</a></td>
 <td>Login NMS Web</td>
 <td>172.20.99.166</td>
 <td>auto_nms_003@commsky.com</td>
@@ -1224,7 +1049,7 @@ td.name, th.name {
 <td class="name"></td>
 <td>...</td>
 <td>服务组件</td>
-<td>DNS服务器</td>
+<td>NTP服务器</td>
 <td></td>
 </tr>
 <tr>
@@ -1237,13 +1062,13 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td>#</td>
-<td>DNS服务器：新增</td>
+<td>NTP服务器：新增</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
-<td>: FOR</td>
+<td>:FOR</td>
 <td>${i}</td>
 <td>IN RANGE</td>
 <td>1</td>
@@ -1258,119 +1083,35 @@ td.name, th.name {
 <tr>
 <td class="name"></td>
 <td></td>
-<td>@{dns_template}=</td>
+<td>@{ntp_template}=</td>
 <td>create List</td>
-<td>template_${i}</td>
+<td>ntptemplate_${i}</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td></td>
 <td>...</td>
-<td>172.20.99.166</td>
-<td>172.20.99.165</td>
+<td>60</td>
+<td>time.nist.gov</td>
 </tr>
 <tr>
 <td class="name"></td>
 <td></td>
 <td>...</td>
+<td>time.windows.com</td>
 <td>1.2.2.2</td>
-<td></td>
 </tr>
 <tr>
 <td class="name"></td>
 <td></td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
+<td>Add NTP Server</td>
+<td>@{ntp_template}</td>
 <td></td>
 </tr>
 <tr>
 <td class="name"></td>
 <td>Sleep</td>
 <td>5</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>[Teardown]</td>
-<td>Delete DNS Server</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"><a name="test_NMS_DNS_template_Exception_illegal">NMS_DNS_template_Exception_illegal</a></td>
-<td>Login NMS Web</td>
-<td>172.20.99.166</td>
-<td>auto_nms_003@commsky.com</td>
-<td>commsky</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{list}=</td>
-<td>create List</td>
-<td>配置</td>
-<td>组件管理</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>...</td>
-<td>服务组件</td>
-<td>DNS服务器</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Go To Component Sub Page</td>
-<td>@{list}</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>#</td>
-<td>DNS服务器：新增</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>@{dns_template}=</td>
-<td>create List</td>
-<td>"template"+"1"</td>
-<td>172.20.99.165</td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>...</td>
-<td>172.20.99.165</td>
-<td>30</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Comment</td>
-<td>Add DNS Server</td>
-<td>@{dns_template}</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>Comment</td>
-<td>Check DNS Server Exception</td>
-<td>@{dns_template}</td>
-<td></td>
-</tr>
-<tr>
-<td class="name"></td>
-<td>[Teardown]</td>
-<td></td>
 <td></td>
 <td></td>
 </tr>
