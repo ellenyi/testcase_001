@@ -1,0 +1,369 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>Ap Web Variable</title>
+</head>
+<body>
+<h1>Ap Web Variable</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Setting</th>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Userdefined</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>OperatingSystem</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Selenium2Library</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>String</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Userdefined</td>
+<td>#Resource</td>
+<td>log_resource.html</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="variable">
+<tr>
+<th class="name" colspan="5">Variables</th>
+</tr>
+<tr>
+<td class="name">${IGMP_Snooping}</td>
+<td>IGMP snooping</td>
+<td># network-setting:IGMP snooping</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${Network_Setting}</td>
+<td>网络设置</td>
+<td># network-setting</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${IGMP_Snooping_MtoU}</td>
+<td>IGMP Snooping MtoU</td>
+<td># Wireless-setting:wireless access service:IGMP Snooping MtoU</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${Wireless_Setting}</td>
+<td>无线设置</td>
+<td># wireless-setting</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${Wireless_Access_Service}</td>
+<td>无线接入服务</td>
+<td># wireless access service</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${IGMP_Snooping_Use}</td>
+<td>IGMP Snooping Use</td>
+<td># network-setting:IGMP Snooping:IGMP Snooping Use</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${css_RF_ServiceList_Edit}</td>
+<td>css=#list_table &gt; table &gt; tbody &gt; tr.odd &gt; td.opBtn0 &gt; input[type="button"]</td>
+<td># wireless-setting:wireless access service:wireless service list:Edit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${css_Wireless_Setting}</td>
+<td>css=#menu &gt; div:nth-child(4) &gt; input</td>
+<td># css for wireless-setting</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${css_Wireless_Access_Service}</td>
+<td>css=#menu_wi_service</td>
+<td># css for wireless access service</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${Confirm_Wireless_Access_Service}</td>
+<td>css=body &gt; div.content_option &gt; input:nth-child(2)</td>
+<td># wireless-setting:wireless access service:wireless service list:Confirm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${IGMP_Snooping_Group_Threshold}</td>
+<td>IGMP Snooping Group Threshold</td>
+<td># network-setting:IGMP snooping:group threshold</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${IGMP_Snooping_Client_Threshold}</td>
+<td>IGMP Snooping Client Threshold</td>
+<td># network-setting:IGMP snooping:client threshold</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${IGMP_Snooping_Aging_Time}</td>
+<td>老化时间</td>
+<td># network-setting:IGMP snooping:aging time</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${css_IGMP_Snooping_Setting_Confirm}</td>
+<td>css=body &gt; div.content_option &gt; input:nth-child(2)</td>
+<td># network-setting:IGMP snooping:setting confirm button</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${css_Network_Setting}</td>
+<td>css=#menu &gt; div:nth-child(3) &gt; input</td>
+<td># css for network-setting</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${css_IGMP_Snooping}</td>
+<td>css=#menu_igmp_snooping</td>
+<td># css for network-setting:IGMP Snooping</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${css_System_Status}</td>
+<td>css=#menu &gt; div:nth-child(2) &gt; input</td>
+<td># css for system status</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${css_IGMP_Snooping_Group_Threshold}</td>
+<td>css=#text_group_threshold</td>
+<td># css for network-setting:IGMP snooping:group threshold</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${css_IGMP_Snooping_Client_Threshold}</td>
+<td>css=#text_client_threshold</td>
+<td># css for network-setting:IGMP snooping:client threshold</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${css_IGMP_Snooping_Aging_Time}</td>
+<td>css=#text_aging_time</td>
+<td># css for network-setting:IGMP snooping:aging time</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${IGMP_Snooping_Forwarding_Strategy}</td>
+<td>IGMP_Snooping_Forwarding_Strategy</td>
+<td># network-setting:IGMP snooping:forwarding strategy</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${css_IGMP_Snooping_Forwarding_Strategy}</td>
+<td>css=#sel_multicast_forward_policy</td>
+<td># css for ntework-setting:IGMP snooping:forwarding strategy</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${css_IGMP_Snooping_Static_Address_Add}</td>
+<td>css=body &gt; div.content_tableQuery &gt; input</td>
+<td># css for network-setting:IGMP snooping:static address:add</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${IGMP_Snooping_Static_Address}</td>
+<td>IGMP Snooping Static Address</td>
+<td># network-setting:IGMP snooping:static address</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${css_IGMP_Snooping_Static_Address_Confirm}</td>
+<td>css=body &gt; div.content_option &gt; input:nth-child(2)</td>
+<td># network-setting:IGMP snooping:static address:add:confirm</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${Device_MNGT}</td>
+<td>设备管理</td>
+<td># 设备管理</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${Device_Maintenance}</td>
+<td>设备维护</td>
+<td>#设备管理》设备维护</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${css_Device_MNGT}</td>
+<td>css=#menu &gt; div:nth-child(5) &gt; input</td>
+<td># css for Device Management</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${css_Device_Maintenance}</td>
+<td>css=#menu_dev_mtc</td>
+<td># css for Device Management:Device Maintenance</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${Trouble_Shooting}</td>
+<td>故障诊断</td>
+<td># 设备管理》设备维护》故障诊断</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${css_RF_Parameter}</td>
+<td>css=#menu_radio_settings</td>
+<td># css for wireless-setting:RF parameter</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${Service_MNGT}</td>
+<td>服务管理</td>
+<td># 网络设置&gt;服务管理</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${WiFi_Sensor}</td>
+<td>无线探针</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${radio 0}</td>
+<td>radio 0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${radio 1}</td>
+<td>radio 1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">${Confirm_TroubleShooting}</td>
+<td>css=#apply</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="keyword">
+<tr>
+<th class="name" colspan="5">Keyword</th>
+</tr>
+</table>
+</body>
+</html>
