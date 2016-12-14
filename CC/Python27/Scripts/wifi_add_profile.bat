@@ -1,0 +1,1 @@
+netsh wlan add profile filename="无线网络连接-RXLT_2.4G.xml"

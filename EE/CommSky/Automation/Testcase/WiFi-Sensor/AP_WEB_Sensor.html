@@ -1,0 +1,3316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>AP WEB Sensor</title>
+</head>
+<body>
+<h1>AP WEB Sensor</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Settings</th>
+</tr>
+<tr>
+<td class="name">Suite Teardown</td>
+<td>AP_WEB_TestSuite_Teardown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Test Teardown</td>
+<td>AP_WEB_TestCase_Teardown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Telnet</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Selenium2Library</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Userdefined</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//common_resource.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//common_resource.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//web_resource.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//web_resource.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_web_resource.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_web_resource.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_web_variable.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_web_variable.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_model_variable.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_model_variable.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="variable">
+<tr>
+<th class="name" colspan="5">Variables</th>
+</tr>
+<tr>
+<td class="name">${file}</td>
+<td>E:\AC_control\\CommSky_G2_FatAP\\user.csv</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="testcase">
+<tr>
+<th class="name" colspan="5">Test Cases</th>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_Default">AP_WEB_Senor_Default</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>${space}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check List Param</td>
+<td>无线探针使能</td>
+<td>disable</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_Enable">AP_WEB_Senor_Enable</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>set variable</td>
+<td>UDP</td>
+<td>172.1.1.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>655</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_report_method</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_ip</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_port</td>
+<td>@{list}[2]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_interval</td>
+<td>@{list}[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#btn_Ok</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>unSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_report_method</td>
+<td>UDP</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_ip</td>
+<td>172.1.1.1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_port</td>
+<td>655</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_interval</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UnSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_Disable">AP_WEB_Senor_Disable</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>${space}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Set Bool Param</td>
+<td>无线探针使能</td>
+<td>disable</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Network_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>${space}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check List Param</td>
+<td>无线探针使能</td>
+<td>disable</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_ReportMode_UDP">AP_WEB_Senor_ReportMode_UDP</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>set variable</td>
+<td>UDP</td>
+<td>172.1.1.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>655</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_report_method</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_ip</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_port</td>
+<td>@{list}[2]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_interval</td>
+<td>@{list}[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#btn_Ok</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>unSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_report_method</td>
+<td>UDP</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_ip</td>
+<td>172.1.1.1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_port</td>
+<td>655</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_interval</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UnSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_ReportMode_TAODIAN">AP_WEB_Senor_ReportMode_TAODIAN</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>set variable</td>
+<td>UDP_TD</td>
+<td>192.1.1.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>655</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_report_method</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_ip</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_port</td>
+<td>@{list}[2]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_interval</td>
+<td>@{list}[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#btn_Ok</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>unSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_report_method</td>
+<td>UDP_TD</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_ip</td>
+<td>192.1.1.1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_port</td>
+<td>655</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_interval</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UnSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_SeverIP_Min">AP_WEB_Senor_SeverIP_Min</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>set variable</td>
+<td>UDP</td>
+<td>1.1.1.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_report_method</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_ip</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_port</td>
+<td>@{list}[2]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_interval</td>
+<td>@{list}[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#btn_Ok</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>unSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_report_method</td>
+<td>UDP</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_ip</td>
+<td>1.1.1.1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_port</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_interval</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UnSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_SeverIP_Max">AP_WEB_Senor_SeverIP_Max</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>set variable</td>
+<td>UDP</td>
+<td>255.255.255.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>65535</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_report_method</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_ip</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_port</td>
+<td>@{list}[2]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_interval</td>
+<td>@{list}[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#btn_Ok</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>unSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_report_method</td>
+<td>UDP</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_ip</td>
+<td>255.255.255.1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_port</td>
+<td>65535</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_interval</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UnSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_SeverIP_Middle">AP_WEB_Senor_SeverIP_Middle</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>set variable</td>
+<td>UDP</td>
+<td>192.168.1.10</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>65535</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_report_method</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_ip</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_port</td>
+<td>@{list}[2]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_interval</td>
+<td>@{list}[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#btn_Ok</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>unSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_report_method</td>
+<td>UDP</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_ip</td>
+<td>192.168.1.10</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_port</td>
+<td>65535</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_interval</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UnSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_SeverIP_OutOfRange_Low">AP_WEB_Senor_SeverIP_OutOfRange_Low</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>set variable</td>
+<td>UDP</td>
+<td>172.20.9.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>65535</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_report_method</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_ip</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_port</td>
+<td>@{list}[2]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_interval</td>
+<td>@{list}[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#btn_Ok</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>unSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_report_method</td>
+<td>UDP</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_ip</td>
+<td>172.20.9.1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_port</td>
+<td>65535</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_interval</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UnSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_SeverIP_OutOfRange_High">AP_WEB_Senor_SeverIP_OutOfRange_High</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>set variable</td>
+<td>UDP</td>
+<td>10.10.10.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>65535</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_report_method</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_ip</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_port</td>
+<td>@{list}[2]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_interval</td>
+<td>@{list}[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#btn_Ok</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>unSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_report_method</td>
+<td>UDP</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_ip</td>
+<td>10.10.10.1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_port</td>
+<td>65535</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_interval</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UnSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_Port_Min">AP_WEB_Senor_Port_Min</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>set variable</td>
+<td>UDP</td>
+<td>100.100.100.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_report_method</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_ip</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_port</td>
+<td>@{list}[2]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_interval</td>
+<td>@{list}[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#btn_Ok</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>unSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_report_method</td>
+<td>UDP</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_ip</td>
+<td>100.100.100.1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_port</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_interval</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UnSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_Port_Max">AP_WEB_Senor_Port_Max</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>set variable</td>
+<td>UDP</td>
+<td>100.100.100.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>65535</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_report_method</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_ip</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_port</td>
+<td>@{list}[2]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_interval</td>
+<td>@{list}[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#btn_Ok</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>unSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_report_method</td>
+<td>UDP</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_ip</td>
+<td>100.100.100.1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_port</td>
+<td>65535</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_interval</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UnSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_Port_Middle">AP_WEB_Senor_Port_Middle</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>set variable</td>
+<td>UDP</td>
+<td>100.100.100.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>30000</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_report_method</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_ip</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_port</td>
+<td>@{list}[2]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_interval</td>
+<td>@{list}[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#btn_Ok</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>unSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_report_method</td>
+<td>UDP</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_ip</td>
+<td>100.100.100.1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_port</td>
+<td>30000</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_interval</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UnSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_Port_OutOfRange_Low">AP_WEB_Senor_Port_OutOfRange_Low</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>set variable</td>
+<td>UDP</td>
+<td>100.100.100.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>2</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_report_method</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_ip</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_port</td>
+<td>@{list}[2]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_interval</td>
+<td>@{list}[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#btn_Ok</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>unSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_report_method</td>
+<td>UDP</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_ip</td>
+<td>100.100.100.1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_port</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_interval</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UnSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_Port_OutOfRange_High">AP_WEB_Senor_Port_OutOfRange_High</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>set variable</td>
+<td>UDP</td>
+<td>100.100.100.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>65534</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_report_method</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_ip</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_port</td>
+<td>@{list}[2]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_interval</td>
+<td>@{list}[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#btn_Ok</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>unSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_report_method</td>
+<td>UDP</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_ip</td>
+<td>100.100.100.1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_port</td>
+<td>65534</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_interval</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UnSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_Interval_Min">AP_WEB_Senor_Interval_Min</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>set variable</td>
+<td>UDP</td>
+<td>100.100.100.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_report_method</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_ip</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_port</td>
+<td>@{list}[2]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_interval</td>
+<td>@{list}[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#btn_Ok</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>unSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_report_method</td>
+<td>UDP</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_ip</td>
+<td>100.100.100.1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_port</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_interval</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UnSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_Interval_Max">AP_WEB_Senor_Interval_Max</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>set variable</td>
+<td>UDP</td>
+<td>100.100.100.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>600</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_report_method</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_ip</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_port</td>
+<td>@{list}[2]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_interval</td>
+<td>@{list}[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#btn_Ok</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>unSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_report_method</td>
+<td>UDP</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_ip</td>
+<td>100.100.100.1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_port</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_interval</td>
+<td>600</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UnSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_Interval_Middle">AP_WEB_Senor_Interval_Middle</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>set variable</td>
+<td>UDP</td>
+<td>100.100.100.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>300</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_report_method</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_ip</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_port</td>
+<td>@{list}[2]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_interval</td>
+<td>@{list}[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#btn_Ok</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>unSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_report_method</td>
+<td>UDP</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_ip</td>
+<td>100.100.100.1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_port</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_interval</td>
+<td>300</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UnSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_Interval_OutOfRange_Low">AP_WEB_Senor_Interval_OutOfRange_Low</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>set variable</td>
+<td>UDP</td>
+<td>100.100.100.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_report_method</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_ip</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_port</td>
+<td>@{list}[2]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_interval</td>
+<td>@{list}[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#btn_Ok</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>unSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_report_method</td>
+<td>UDP</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_ip</td>
+<td>100.100.100.1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_port</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_interval</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UnSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_AP_WEB_Senor_Interval_OutOfRange_High">AP_WEB_Senor_Interval_OutOfRange_High</a></td>
+<td>[Tags]</td>
+<td>Sensor</td>
+<td>WEB</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>TelnetAP</td>
+<td>${ConsoleServer_IP}</td>
+<td>${ConsoleServer_Port}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>RestoreAP</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>Close All Connections</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login AP Web</td>
+<td>${WEB_IP}</td>
+<td>admin</td>
+<td>admin</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>set variable</td>
+<td>UDP</td>
+<td>100.100.100.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1</td>
+<td>599</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from list by value</td>
+<td>css=#sel_report_method</td>
+<td>@{list}[0]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_ip</td>
+<td>@{list}[1]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_udp_port</td>
+<td>@{list}[2]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#text_interval</td>
+<td>@{list}[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#btn_Ok</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>unSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Sub Page</td>
+<td>${Wireless_Setting}</td>
+<td>${WiFi_Sensor}</td>
+<td>none</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_enable</td>
+<td>enabled</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>List Selection should Be</td>
+<td>css=#sel_report_method</td>
+<td>UDP</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_ip</td>
+<td>100.100.100.1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_udp_port</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Textfield Value Should Be</td>
+<td>css=#text_interval</td>
+<td>599</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>UnSelect Frame</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Logout AP Web</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</body>
+</html>

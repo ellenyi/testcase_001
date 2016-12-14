@@ -1,0 +1,1645 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>NMS AAAServer</title>
+</head>
+<body>
+<h1>NMS AAAServer</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Settings</th>
+</tr>
+<tr>
+<td class="name">Suite Setup</td>
+<td>Clean NMS Chrome Driver</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Suite Teardown</td>
+<td>NMS_TestSuite_TearDown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Test Teardown</td>
+<td>Delete AAA Server All</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Telnet</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Selenium2Library</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Userdefined</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//common_resource.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//common_resource.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//web_resource.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//web_resource.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_web_resource.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_web_resource.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_web_variable.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_web_variable.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//nms_web_resource.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//nms_web_resource.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="testcase">
+<tr>
+<th class="name" colspan="5">Test Cases</th>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_AAAServer_Default">NMS_AAAServer_Default</a></td>
+<td>[Tags]</td>
+<td>NMS</td>
+<td>AAA</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>认证组件</td>
+<td>AAA服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page 2</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>AAAS服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page Should Contain</td>
+<td>没有记录</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_AAAServer_DeleteAll">NMS_AAAServer_DeleteAll</a></td>
+<td>[Tags]</td>
+<td>NMS</td>
+<td>AAA</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>认证组件</td>
+<td>AAA服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page 2</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>删除所有AAA服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{aaa_template}=</td>
+<td>create List</td>
+<td>testaaadelete</td>
+<td>此用例用于测试删除AAA服务器</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>172.20.99.166</td>
+<td>1812</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AAA Server</td>
+<td>@{aaa_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_AAAServer_Add">NMS_AAAServer_Add</a></td>
+<td>[Tags]</td>
+<td>NMS</td>
+<td>AAA</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>认证组件</td>
+<td>AAA服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page 2</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>新增AAA服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{aaa_template}=</td>
+<td>create List</td>
+<td>newAAARadius</td>
+<td>新增RADIUS服务器</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>172.20.99.166</td>
+<td>1812</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AAA Server</td>
+<td>@{aaa_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AAA Server</td>
+<td>@{aaa_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_AAAServer_Min">NMS_AAAServer_Min</a></td>
+<td>[Tags]</td>
+<td>NMS</td>
+<td>AAA</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>认证组件</td>
+<td>AAA服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page 2</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>新增AAA服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{aaa_template}=</td>
+<td>create List</td>
+<td>a</td>
+<td>模板名称最小</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1.1.1.1</td>
+<td>1</td>
+<td>c</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AAA Server</td>
+<td>@{aaa_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AAA Server</td>
+<td>@{aaa_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_AAAServer_Max">NMS_AAAServer_Max</a></td>
+<td>[Tags]</td>
+<td>NMS</td>
+<td>AAA</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>认证组件</td>
+<td>AAA服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page 2</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>新增AAA服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{aaa_template}=</td>
+<td>create List</td>
+<td>newAAARadiusServ</td>
+<td>新增RADIUS服务器模板名称最长</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>254.254.254.255</td>
+<td>50000</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AAA Server</td>
+<td>@{aaa_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AAA Server</td>
+<td>@{aaa_template}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_AAAServer_Middle">NMS_AAAServer_Middle</a></td>
+<td>[Tags]</td>
+<td>NMS</td>
+<td>AAA</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>认证组件</td>
+<td>AAA服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page 2</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>新增AAA服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_server}=</td>
+<td>create List</td>
+<td>172.20.99.11</td>
+<td>1812</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>commsky</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>&amp;{aaa_dic}=</td>
+<td>create Dictionary</td>
+<td>template_name=AAARadiusnormal</td>
+<td>desc=新增RADIUS服务器模板</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>main_server=@{pri_server}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AAA Server Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AAA Server Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_AAAServer_PriAccIp">NMS_AAAServer_PriAccIp</a></td>
+<td>[Tags]</td>
+<td>NMS</td>
+<td>AAA</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>认证组件</td>
+<td>AAA服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page 2</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>新增AAA服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_server}=</td>
+<td>create List</td>
+<td>172.20.99.11</td>
+<td>1812</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>commsky</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_acc_server}=</td>
+<td>create List</td>
+<td>2.2.2.2</td>
+<td>1812</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>commsky</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>&amp;{aaa_dic}=</td>
+<td>create Dictionary</td>
+<td>template_name=PriAccIp</td>
+<td>desc=测试主RADIUS计费服务器</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>main_auth_server=@{pri_server}</td>
+<td>main_acc_server=@{pri_acc_server}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_AAAServer_PriAccIp_Min">NMS_AAAServer_PriAccIp_Min</a></td>
+<td>[Tags]</td>
+<td>NMS</td>
+<td>AAA</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>认证组件</td>
+<td>AAA服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page 2</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>新增AAA服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_server}=</td>
+<td>create List</td>
+<td>1.1.1.1</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_acc_server}=</td>
+<td>create List</td>
+<td>1.1.1.1</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>c</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>&amp;{aaa_dic}=</td>
+<td>create Dictionary</td>
+<td>template_name=PriAccIpMin</td>
+<td>desc=测试主RADIUS计费服务器</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>main_auth_server=@{pri_server}</td>
+<td>main_acc_server=@{pri_acc_server}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_AAAServer_PriAccIp_Max">NMS_AAAServer_PriAccIp_Max</a></td>
+<td>[Tags]</td>
+<td>NMS</td>
+<td>AAA</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>认证组件</td>
+<td>AAA服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page 2</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>新增AAA服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_server}=</td>
+<td>create List</td>
+<td>254.254.254.254</td>
+<td>60000</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>commsky</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_acc_server}=</td>
+<td>create List</td>
+<td>254.254.254.254</td>
+<td>50000</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>commsky</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>&amp;{aaa_dic}=</td>
+<td>create Dictionary</td>
+<td>template_name=PriAccIpMax</td>
+<td>desc=测试主RADIUS计费服务器</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>main_auth_server=@{pri_server}</td>
+<td>main_acc_server=@{pri_acc_server}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_AAAServer_PriAccIp_Middle">NMS_AAAServer_PriAccIp_Middle</a></td>
+<td>[Tags]</td>
+<td>NMS</td>
+<td>AAA</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>认证组件</td>
+<td>AAA服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page 2</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>新增AAA服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_server}=</td>
+<td>create List</td>
+<td>192.168.101.10</td>
+<td>1812</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>commsky</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_acc_server}=</td>
+<td>create List</td>
+<td>172.20.20.10</td>
+<td>1812</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>commsky</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>&amp;{aaa_dic}=</td>
+<td>create Dictionary</td>
+<td>template_name=PriAccIpMiddle</td>
+<td>desc=测试主RADIUS计费服务器</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>main_auth_server=@{pri_server}</td>
+<td>main_acc_server=@{pri_acc_server}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_AAAServer_PriAccPort_Min">NMS_AAAServer_PriAccPort_Min</a></td>
+<td>[Tags]</td>
+<td>NMS</td>
+<td>AAA</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>认证组件</td>
+<td>AAA服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page 2</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>新增AAA服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_server}=</td>
+<td>create List</td>
+<td>1.1.1.1</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_acc_server}=</td>
+<td>create List</td>
+<td>1.1.1.1</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>c</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>&amp;{aaa_dic}=</td>
+<td>create Dictionary</td>
+<td>template_name=PriAccPortMin</td>
+<td>desc=测试主RADIUS计费服务器端口最小值</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>main_auth_server=@{pri_server}</td>
+<td>main_acc_server=@{pri_acc_server}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_AAAServer_PriAccPort_Max">NMS_AAAServer_PriAccPort_Max</a></td>
+<td>[Tags]</td>
+<td>NMS</td>
+<td>AAA</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>认证组件</td>
+<td>AAA服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page 2</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>新增AAA服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_server}=</td>
+<td>create List</td>
+<td>254.254.254.254</td>
+<td>65535</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>commsky</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_acc_server}=</td>
+<td>create List</td>
+<td>254.254.254.254</td>
+<td>65535</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>commsky</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>&amp;{aaa_dic}=</td>
+<td>create Dictionary</td>
+<td>template_name=PriAccPortMax</td>
+<td>desc=测试主RADIUS计费服务器端口最大值</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>main_auth_server=@{pri_server}</td>
+<td>main_acc_server=@{pri_acc_server}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_AAAServer_PriAccPort_Middle">NMS_AAAServer_PriAccPort_Middle</a></td>
+<td>[Tags]</td>
+<td>NMS</td>
+<td>AAA</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>认证组件</td>
+<td>AAA服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page 2</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>新增AAA服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_server}=</td>
+<td>create List</td>
+<td>192.168.101.10</td>
+<td>1812</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>commsky</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_acc_server}=</td>
+<td>create List</td>
+<td>172.20.20.10</td>
+<td>1812</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>commsky</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>&amp;{aaa_dic}=</td>
+<td>create Dictionary</td>
+<td>template_name=PriAccPortMiddle</td>
+<td>desc=测试主RADIUS计费服务器端口正常值</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>main_auth_server=@{pri_server}</td>
+<td>main_acc_server=@{pri_acc_server}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_AAAServer_PriAccPwd_Min">NMS_AAAServer_PriAccPwd_Min</a></td>
+<td>[Tags]</td>
+<td>NMS</td>
+<td>AAA</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>认证组件</td>
+<td>AAA服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page 2</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>新增AAA服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_server}=</td>
+<td>create List</td>
+<td>1.1.1.1</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_acc_server}=</td>
+<td>create List</td>
+<td>1.1.1.1</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>c</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>&amp;{aaa_dic}=</td>
+<td>create Dictionary</td>
+<td>template_name=PriAccPwdMin</td>
+<td>desc=测试主RADIUS计费服务器密码最小值</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>main_auth_server=@{pri_server}</td>
+<td>main_acc_server=@{pri_acc_server}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_AAAServer_PriAccPwd_Max">NMS_AAAServer_PriAccPwd_Max</a></td>
+<td>[Tags]</td>
+<td>NMS</td>
+<td>AAA</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>认证组件</td>
+<td>AAA服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page 2</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>新增AAA服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_server}=</td>
+<td>create List</td>
+<td>254.254.254.254</td>
+<td>60000</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>commsky</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_acc_server}=</td>
+<td>create List</td>
+<td>254.254.254.254</td>
+<td>50000</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1234567890123456789012345678901234567890123456789012345678901234</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>&amp;{aaa_dic}=</td>
+<td>create Dictionary</td>
+<td>template_name=PriAccPwdMax</td>
+<td>desc=测试主RADIUS计费服务器密码最大值</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>main_auth_server=@{pri_server}</td>
+<td>main_acc_server=@{pri_acc_server}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_AAAServer_PriAccPwd_Middle">NMS_AAAServer_PriAccPwd_Middle</a></td>
+<td>[Tags]</td>
+<td>NMS</td>
+<td>AAA</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>认证组件</td>
+<td>AAA服务器</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To Component Sub Page 2</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>#</td>
+<td>新增AAA服务器</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_server}=</td>
+<td>create List</td>
+<td>192.168.101.10</td>
+<td>1812</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>commsky</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{pri_acc_server}=</td>
+<td>create List</td>
+<td>172.20.20.10</td>
+<td>1812</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>commsky12345678901234567890</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>&amp;{aaa_dic}=</td>
+<td>create Dictionary</td>
+<td>template_name=PriAccPwdMiddle</td>
+<td>desc=测试主RADIUS计费服务器密码正常值</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>main_auth_server=@{pri_server}</td>
+<td>main_acc_server=@{pri_acc_server}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Check AAA Server Main ACC Dic</td>
+<td>&amp;{aaa_dic}</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,3596 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>NMS IGMPSnooping</title>
+</head>
+<body>
+<h1>NMS IGMPSnooping</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Settings</th>
+</tr>
+<tr>
+<td class="name">Suite Teardown</td>
+<td>NMS_TestSuite_Teardown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Test Teardown</td>
+<td>NMS_TestCase_Teardown</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Telnet</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Selenium2Library</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Userdefined</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//common_resource.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//common_resource.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//web_resource.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//web_resource.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_web_resource.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_web_resource.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_web_variable.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_web_variable.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//nms_web_resource.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//nms_web_resource.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td><a href="C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_model_variable.html">C://Python27//Lib//site-packages//Commskykeyword//Userdefined//resources//ap_model_variable.html</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="variable">
+<tr>
+<th class="name" colspan="5">Variables</th>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="testcase">
+<tr>
+<th class="name" colspan="5">Test Cases</th>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Default">NMS_IGMPSnooping_Default</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Open Browser</td>
+<td><a href="http://172.20.99.166/nms/login.jsp">http://172.20.99.166/nms/login.jsp</a></td>
+<td>gc</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input Text</td>
+<td>css=#userName</td>
+<td>auto_nms_003@commsky.com</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input Text</td>
+<td>css=#password</td>
+<td>commsky</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#login_login</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close all Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Client_Threshold_Default">NMS_IGMPSnooping_Client_Threshold_Default</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>组播组最大数量</td>
+<td>[2-256,缺省:256]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>1</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>10</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>260</td>
+<td>OFF</td>
+<td>224.1.1.10</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Default</td>
+<td>Default</td>
+<td>Default</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Default</td>
+<td>Default</td>
+<td>Default</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>224.1.1.1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Client_Threshold_Min">NMS_IGMPSnooping_Client_Threshold_Min</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>组播组最大数量</td>
+<td>[2-256,缺省:256]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>1</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>10</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>260</td>
+<td>OFF</td>
+<td>224.1.1.11</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Default</td>
+<td>Default</td>
+<td>Default</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>Default</td>
+<td>Default</td>
+<td>Default</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>224.1.1.1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>[Teardown]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Client_Threshold_Max">NMS_IGMPSnooping_Client_Threshold_Max</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>组播组最大数量</td>
+<td>[2-256,缺省:256]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>2</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>260</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>224.1.1.12</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Client_Threshold_Middle">NMS_IGMPSnooping_Client_Threshold_Middle</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>组播组最大数量</td>
+<td>[2-256,缺省:256]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>3</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>10</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>260</td>
+<td>OFF</td>
+<td>224.1.1.13</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Client_Threshold_OutOfRange_Low">NMS_IGMPSnooping_Client_Threshold_OutOfRange_Low</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>组播组最大数量</td>
+<td>[2-256,缺省:256]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>4</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>260</td>
+<td>OFF</td>
+<td>224.1.1.14</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page should Contain</td>
+<td>输入范围&lt;10-1440&gt;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Client_Threshold_OutOfRange_High">NMS_IGMPSnooping_Client_Threshold_OutOfRange_High</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>组播组最大数量</td>
+<td>[2-256,缺省:256]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>4</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>1441</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>260</td>
+<td>OFF</td>
+<td>224.1.1.14</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page should Contain</td>
+<td>输入范围&lt;10-1440&gt;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Client_Threshold_OutOfRange_pull">NMS_IGMPSnooping_Client_Threshold_OutOfRange_pull</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>组播组最大数量</td>
+<td>[2-256,缺省:256]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>4</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>\#</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>260</td>
+<td>OFF</td>
+<td>224.1.1.14</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page should Contain</td>
+<td>请输入正整数</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Client_Threshold_OutOfRange_space">NMS_IGMPSnooping_Client_Threshold_OutOfRange_space</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>组播组最大数量</td>
+<td>[2-256,缺省:256]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>4</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>${space}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>260</td>
+<td>OFF</td>
+<td>224.1.1.14</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page should Contain</td>
+<td>必填信息</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Aging_Time_Default">NMS_IGMPSnooping_Aging_Time_Default</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>老化时间</td>
+<td>[200-1000,缺省:260]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>11</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>260</td>
+<td>OFF</td>
+<td>225.1.1.10</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Aging_Time_Min">NMS_IGMPSnooping_Aging_Time_Min</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>老化时间</td>
+<td>[200-1000,缺省:260]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>12</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>225.1.1.11</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Aging_Time_Max">NMS_IGMPSnooping_Aging_Time_Max</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>老化时间</td>
+<td>[200-1000,缺省:260]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>13</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1000</td>
+<td>OFF</td>
+<td>225.1.1.12</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Aging_Time_Middle">NMS_IGMPSnooping_Aging_Time_Middle</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>老化时间</td>
+<td>[200-1000,缺省:260]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>14</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>225.1.1.13</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Aging_Time_OutOfRange_Low">NMS_IGMPSnooping_Aging_Time_OutOfRange_Low</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>老化时间</td>
+<td>[200-1000,缺省:260]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>14</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>199</td>
+<td>OFF</td>
+<td>225.1.1.13</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page should contain</td>
+<td>输入范围&lt;200-1000&gt;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Aging_Time_OutOfRange_High">NMS_IGMPSnooping_Aging_Time_OutOfRange_High</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>老化时间</td>
+<td>[200-1000,缺省:260]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>14</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>1001</td>
+<td>OFF</td>
+<td>225.1.1.13</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page should contain</td>
+<td>输入范围&lt;200-1000&gt;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Aging_Time_OutOfRange_Pull">NMS_IGMPSnooping_Aging_Time_OutOfRange_Pull</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>老化时间</td>
+<td>[200-1000,缺省:260]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>14</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>\#</td>
+<td>OFF</td>
+<td>225.1.1.13</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page should contain</td>
+<td>请输入正整数</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Aging_Time_OutOfRange_Space">NMS_IGMPSnooping_Aging_Time_OutOfRange_Space</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>老化时间</td>
+<td>[200-1000,缺省:260]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>14</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>${space}</td>
+<td>OFF</td>
+<td>225.1.1.13</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page should contain</td>
+<td>必填信息</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Forwarding_Policy_Accept_all">NMS_IGMPSnooping_Forwarding_Policy_Accept_all</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>组播转发策略</td>
+<td>丢弃位置组 / 全部丢弃 / 缺省：全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>21</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>226.1.1.10</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Forwarding_Policy_Drop_Unknown">NMS_IGMPSnooping_Forwarding_Policy_Drop_Unknown</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>组播转发策略</td>
+<td>丢弃位置组 / 全部丢弃 / 缺省：全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>22</td>
+<td>丢弃位置组</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>226.1.1.11</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Forwarding_Policy_Drop_All">NMS_IGMPSnooping_Forwarding_Policy_Drop_All</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>组播转发策略</td>
+<td>丢弃位置组 / 全部丢弃 / 缺省：全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>comment</td>
+<td>新增</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click button</td>
+<td>css=#multicastTableAdd</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select from List</td>
+<td>css=#multicastForwardPolicy</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Element Should Be Disabled</td>
+<td>css=#groupMemberThreshold</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Element Should Be Disabled</td>
+<td>css=#multicast_aging_time</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Element Should Be Disabled</td>
+<td>css=#reportStatiGroups &gt; thead &gt; tr &gt; th.sorting_disabled &gt; button.skyAdd</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Static_Address_Add">NMS_IGMPSnooping_Static_Address_Add</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>静态加入组播组列表</td>
+<td>IP范围 【224.0.1.0-239.255.255.255】</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>31</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>227.1.1.10</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Static_Address_Add_Min">NMS_IGMPSnooping_Static_Address_Add_Min</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>静态加入组播组列表</td>
+<td>IP范围 【224.0.1.0-239.255.255.255】</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>32</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>224.0.1.0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Static_Address_Add_Max">NMS_IGMPSnooping_Static_Address_Add_Max</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>静态加入组播组列表</td>
+<td>IP范围 【224.0.1.0-239.255.255.255】</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>33</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>239.255.255.255</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Static_Address_Add_Middle">NMS_IGMPSnooping_Static_Address_Add_Middle</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>静态加入组播组列表</td>
+<td>IP范围 【224.0.1.0-239.255.255.255】</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>34</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>230.255.255.255</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Static_Address_Add_2records">NMS_IGMPSnooping_Static_Address_Add_2records</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>静态加入组播组列表</td>
+<td>IP范围 【224.0.1.0-239.255.255.255】</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>35</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>230.255.255.0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>36</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>230.255.255.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Static_Address_Add_OutOfRange_Low">NMS_IGMPSnooping_Static_Address_Add_OutOfRange_Low</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>静态加入组播组列表</td>
+<td>IP范围 【224.0.1.0-239.255.255.255】</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>34</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>223.255.255.255</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page should Contain</td>
+<td>IP范围 【224.0.1.0-239.255.255.255】</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Static_Address_Add_OutOfRange_High">NMS_IGMPSnooping_Static_Address_Add_OutOfRange_High</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>静态加入组播组列表</td>
+<td>IP范围 【224.0.1.0-239.255.255.255】</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>34</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>240.0.1.0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page should Contain</td>
+<td>IP范围 【224.0.1.0-239.255.255.255】</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Static_Address_Add_OutOfRange_space">NMS_IGMPSnooping_Static_Address_Add_OutOfRange_space</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>静态加入组播组列表</td>
+<td>IP范围 【224.0.1.0-239.255.255.255】</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>34</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>${space}</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page Should Contain</td>
+<td>必填信息</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Static_Address_Add_OutOfRange_pull">NMS_IGMPSnooping_Static_Address_Add_OutOfRange_pull</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>静态加入组播组列表</td>
+<td>IP范围 【224.0.1.0-239.255.255.255】</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>34</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>\#</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page should Contain</td>
+<td>IP范围 【224.0.1.0-239.255.255.255】</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Static_Address_Add_OutOfRange_StaticAddressAtleast1">NMS_IGMPSnooping_Static_Address_Add_OutOfRange_StaticAddressAtleast1</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>静态加入组播组列表</td>
+<td>IP范围 【224.0.1.0-239.255.255.255】</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>37</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>230.255.255.0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>comment</td>
+<td>新增</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click button</td>
+<td>css=#multicastTableAdd</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input text</td>
+<td>css=#multicastProfileName</td>
+<td>37</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Focus</td>
+<td>css=#multicast_server_save</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Button</td>
+<td>css=#multicast_server_save</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page Should Contain</td>
+<td>静态加入组播组列表中至少有一条IP地址</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Static_Address_Add_OutOfRange_TemplateExist">NMS_IGMPSnooping_Static_Address_Add_OutOfRange_TemplateExist</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>静态加入组播组列表</td>
+<td>IP范围 【224.0.1.0-239.255.255.255】</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>38</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>230.255.255.0</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>38</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>230.255.255.1</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page Should Contain</td>
+<td>该名称已经存在</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Delete">NMS_IGMPSnooping_Delete</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>新增静态组播组列表</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{multigroup}=</td>
+<td>create List</td>
+<td>41</td>
+<td>全部转发</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>ON</td>
+<td>OFF</td>
+<td>256</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>200</td>
+<td>OFF</td>
+<td>239.255.255.255</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Add Multi Group</td>
+<td>@{multigroup}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>删除静态组播组列表</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Focus</td>
+<td>css=#multicast_report_containers</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select Checkbox</td>
+<td>css=#multicast_report_containers &gt; tbody &gt; tr:nth-child(1) &gt; td.cell_center.sorting_1 &gt; input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Element</td>
+<td>css=#multicastTabDelete</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Focus</td>
+<td>css=#defaultConfirmDlg &gt; div &gt; div</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Element</td>
+<td>css=#defaultDlgSubmit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page Should Contain</td>
+<td>删除成功</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_DeleteAll">NMS_IGMPSnooping_DeleteAll</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>IGMP-Snooping: IGMP Snooping</td>
+<td>删除所有静态组播组列表</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Focus</td>
+<td>css=#multicast_report_containers</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Select Checkbox</td>
+<td>css=#mutiCheckAll</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Element</td>
+<td>css=#multicastTabDelete</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Focus</td>
+<td>css=#defaultConfirmDlg &gt; div &gt; div</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Element</td>
+<td>css=#defaultDlgSubmit</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page Should Contain</td>
+<td>删除成功</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Exception_Add_Twise">NMS_IGMPSnooping_Exception_Add_Twise</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>comment</td>
+<td>新增</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click button</td>
+<td>css=#multicastTableAdd</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${result}=</td>
+<td>Run Keyword and Return Status</td>
+<td>click button</td>
+<td>css=#multicastTableAdd</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Be True</td>
+<td>${result}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Exception_Edit">NMS_IGMPSnooping_Exception_Edit</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>comment</td>
+<td>编辑</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click Element</td>
+<td>css=#multicastTabEdit &gt; i</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${output}=</td>
+<td>Page Should Contain</td>
+<td>请选择一行，然后编辑</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Exception_Delete">NMS_IGMPSnooping_Exception_Delete</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>comment</td>
+<td>编辑</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click Element</td>
+<td>css=#multicastTabDelete &gt; i</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${output}=</td>
+<td>Page Should Contain</td>
+<td>请选择一行，然后删除</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_NMS_IGMPSnooping_Exception_Add_Edit_Delete">NMS_IGMPSnooping_Exception_Add_Edit_Delete</a></td>
+<td>[Tags]</td>
+<td>IGMPSnooping</td>
+<td>NMS</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Login NMS Web</td>
+<td>172.20.99.166</td>
+<td>auto_nms_003@commsky.com</td>
+<td>commsky</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>@{list}=</td>
+<td>create List</td>
+<td>配置</td>
+<td>组件管理</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>...</td>
+<td>通用组件</td>
+<td>组播管理</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Go To NMS Sub Page</td>
+<td>@{list}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>comment</td>
+<td>新增</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>click button</td>
+<td>css=#multicastTableAdd</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${result}=</td>
+<td>Run Keyword and Return Status</td>
+<td>click Element</td>
+<td>css=#multicastTabEdit &gt; i</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Not Be True</td>
+<td>${result}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Close All Browsers</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</body>
+</html>
